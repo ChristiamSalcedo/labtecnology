@@ -1,0 +1,1264 @@
+{
+  "categories": [
+  {
+    "id": "diagnostico",
+    "icon": "hematologia",
+    "es": { "name": "Diagnóstico Clínico", "tagline": "Analizadores hematológicos automatizados" },
+    "en": { "name": "Clinical Diagnostics", "tagline": "Automated hematology analyzers" }
+  },
+  {
+    "id": "especializado",
+    "icon": "quimica",
+    "es": { "name": "Análisis Especializado", "tagline": "Analizadores de bioquímica clínica" },
+    "en": { "name": "Specialized Analysis", "tagline": "Clinical chemistry analyzers" }
+  },
+  {
+    "id": "laboratorio",
+    "icon": "electrolitos",
+    "es": { "name": "Equipos de Laboratorio", "tagline": "Análisis de gases y electrólitos en sangre" },
+    "en": { "name": "Laboratory Equipment", "tagline": "Blood gas and electrolyte analysis" }
+  },
+  {
+    "id": "reactivos-insumos",
+    "icon": "inmunoanalisis",
+    "es": { "name": "Reactivos e Insumos", "tagline": "Inmunoensayo, ELISA y electroquimioluminiscencia" },
+    "en": { "name": "Reagents & Supplies", "tagline": "Immunoassay, ELISA and electrochemiluminescence" }
+  },
+  {
+    "id": "hospitalarios",
+    "icon": "coagulacion",
+    "es": { "name": "Equipos Médicos Hospitalarios", "tagline": "Analizadores de hemostasia" },
+    "en": { "name": "Medical & Hospital Equipment", "tagline": "Hemostasis analyzers" }
+  },
+  {
+    "id": "monitoreo",
+    "icon": "auxiliares",
+    "es": { "name": "Diagnóstico y Monitoreo Médico", "tagline": "Centrífugas, baños de maría y pipetas" },
+    "en": { "name": "Medical Diagnostics & Monitoring", "tagline": "Centrifuges, water baths and pipettes" }
+  }
+],
+  "products": [
+    {
+      "id": "bc-20s",
+      "category": "diagnostico",
+      "brand": "Mindray",
+      "image": "assets/img/products/bc-20s.png",
+      "es": {
+        "name": "Equipo Hematológico BC-20S",
+        "description": "Analizador hematológico de 3 partes, compacto y potente, ideal para laboratorios clínicos pequeños y medianos. Detecta WBC, RBC y PLT con pantalla táctil TFT de 8.4 pulgadas y una productividad superior a 40 análisis por hora.",
+        "features": [
+          "Tecnología de citometría de flujo con láser para una diferenciación leucocitaria de alta precisión.",
+          "Procesamiento de hasta 60 muestras por hora, optimizando el flujo de trabajo del laboratorio.",
+          "Sistema automático de limpieza y mantenimiento que reduce tiempos de inactividad.",
+          "Amplia capacidad de almacenamiento de resultados con conexión a sistemas LIS para una gestión eficiente de datos."
+        ]
+      },
+      "en": {
+        "name": "BC-20S Hematology Analyzer",
+        "description": "Compact and powerful 3-part hematology analyzer for small and mid-size clinical laboratories. Detects WBC, RBC and PLT with an 8.4-inch TFT touchscreen and throughput above 40 tests per hour.",
+        "features": [
+          "Laser-based flow cytometry technology for highly accurate white blood cell differentiation.",
+          "Throughput of up to 60 samples per hour, optimizing laboratory workflow.",
+          "Automatic cleaning and maintenance system reducing operational downtime.",
+          "Large data storage capacity with LIS connectivity for efficient data management."
+        ]
+      }
+    },
+    {
+      "id": "bc-5390",
+      "category": "diagnostico",
+      "brand": "Mindray",
+      "image": "assets/img/products/bc-5390.png",
+      "es": {
+        "name": "Equipo Hematológico BC-5390",
+        "description": "Analizador hematológico automático de 5 partes que combina dispersión láser, citometría de flujo y coloración química para ofrecer resultados clínicos de alta precisión. Aprobado por la FDA.",
+        "features": [
+          "Diseño compacto ideal para laboratorios con espacio reducido.",
+          "Identificación automática de muestras mediante lector de código de barras.",
+          "Control interno de calidad para garantizar resultados consistentes.",
+          "Interfaz intuitiva con pantalla táctil de fácil operación."
+        ]
+      },
+      "en": {
+        "name": "BC-5390 Hematology Analyzer",
+        "description": "Automatic 5-part hematology analyzer combining laser scatter, flow cytometry and chemical dyeing technologies to deliver highly precise clinical results. FDA approved.",
+        "features": [
+          "Compact design ideal for laboratories with limited space.",
+          "Automatic sample identification using a barcode reader.",
+          "Internal quality control to ensure consistent results.",
+          "Intuitive touch screen interface for easy operation."
+        ]
+      }
+    },
+    {
+      "id": "act-diff-2",
+      "category": "diagnostico",
+      "brand": "Beckman Coulter",
+      "image": "assets/img/products/diff-2.png",
+      "es": {
+        "name": "Equipo Hematológico ACT diff 2",
+        "description": "Sistema completamente automatizado que ofrece un CBC y un diferencial de histograma Coulter de 3 partes con precisión uniforme, muestreo de vial cerrado y cero mantenimiento de rutina. Ejecuta aproximadamente 100 CBC al día.",
+        "features": [
+          "Tecnología de impedancia Coulter para un recuento celular altamente preciso.",
+          "Bajo consumo de reactivos, reduciendo los costos operativos del laboratorio.",
+          "Procedimientos automáticos de limpieza y mantenimiento para prolongar la vida útil del equipo.",
+          "Diseño compacto que facilita su instalación en laboratorios con espacio reducido."
+        ]
+      },
+      "en": {
+        "name": "ACT diff 2 Hematology Analyzer",
+        "description": "Fully automated system delivering a CBC and a 3-part Coulter histogram differential with consistent accuracy, closed-vial sampling and zero routine maintenance. Runs approximately 100 CBCs per day.",
+        "features": [
+          "Coulter impedance technology for highly accurate cell counting.",
+          "Low reagent consumption, reducing laboratory operating costs.",
+          "Automatic cleaning and maintenance procedures to extend equipment lifespan.",
+          "Compact design for easy installation in laboratories with limited space."
+        ]
+      }
+    },
+    {
+      "id": "bk-200",
+      "category": "diagnostico",
+      "brand": "Biobase",
+      "image": "assets/img/products/bk-200.png",
+      "es": {
+        "name": "Analizador de Química Sanguínea BK-200",
+        "description": "Analizador de química sanguínea automatizado con un rendimiento de 200 pruebas por hora. Métodos de análisis a punto final, tiempo fijo y cinética, con certificaciones CE, FDA, ISO9001, ISO14001 e ISO13485.",
+        "features": [
+          "Sistema de acceso aleatorio que permite el procesamiento continuo de muestras.",
+          "Bandeja refrigerada para mantener la estabilidad de los reactivos durante toda la jornada.",
+          "Micropipeteo de alta precisión que reduce el consumo de reactivos y muestras.",
+          "Compatible con perfiles hepáticos, renales, lipídicos, enzimáticos y metabólicos."
+        ]
+      },
+      "en": {
+        "name": "BK-200 Blood Chemistry Analyzer",
+        "description": "Automated blood chemistry analyzer with a throughput of 200 tests per hour. Endpoint, fixed-time and kinetic analysis methods, certified CE, FDA, ISO9001, ISO14001 and ISO13485.",
+        "features": [
+          "Random access system that allows continuous sample processing.",
+          "Refrigerated tray to maintain reagent stability throughout the workday.",
+          "High-precision micropipetting that reduces sample and reagent consumption.",
+          "Compatible with hepatic, renal, lipid, enzymatic, and metabolic profiles."
+        ]
+      }
+    },
+    {
+      "id": "bs-120",
+      "category": "diagnostico",
+      "brand": "Mindray",
+      "image": "assets/img/products/bs-120.png",
+      "es": {
+        "name": "Analizador de Química Sanguínea BS-120",
+        "description": "Acceso automático, discreto y aleatorio con prioridad para muestras STAT. Hasta 300 pruebas por hora con ISE de 3 iones, sistema abierto con perfiles y cálculos definidos por el usuario.",
+        "features": [
+          "Capacidad para realizar hasta 100 pruebas fotométricas por hora.",
+          "Sistema automático de lavado de cubetas que minimiza el riesgo de contaminación cruzada.",
+          "Software inteligente para el control de calidad, calibración y gestión de resultados.",
+          "Diseño compacto que optimiza el espacio sin comprometer el rendimiento."
+        ]
+      },
+      "en": {
+        "name": "BS-120 Blood Chemistry Analyzer",
+        "description": "Automatic, discrete and random access with STAT sample priority. Up to 300 tests per hour with 3-ion ISE, open system with user-defined profiles and calculations.",
+        "features": [
+          "Capacity to perform up to 100 photometric tests per hour.",
+          "Automatic cuvette washing system that minimizes the risk of cross-contamination.",
+          "Intelligent software for quality control, calibration, and results management.",
+          "Compact design that optimizes space without compromising performance."
+        ]
+      }
+    },
+    {
+      "id": "omega-iv",
+      "category": "diagnostico",
+      "brand": "Awareness Technology",
+      "image": "assets/img/products/omega-IV.png",
+      "es": {
+        "name": "Analizador de Química Semi Automático Omega IV",
+        "description": "Analizador de química semiautomático confiable y de fácil operación, diseñado para laboratorios clínicos que requieren resultados precisos con una inversión accesible.",
+        "features": [
+          "Sistema óptico de alta estabilidad que garantiza resultados reproducibles.",
+          "Compatible con múltiples metodologías, incluyendo punto final, cinética y tiempo fijo.",
+          "Pantalla LCD con menú intuitivo para una programación rápida de pruebas.",
+          "Memoria interna para almacenar resultados y facilitar su consulta posterior."
+        ]
+      },
+      "en": {
+        "name": "Omega IV Semi-Automatic Chemistry Analyzer",
+        "description": "Reliable, easy-to-operate semi-automatic chemistry analyzer designed for clinical laboratories that need accurate results with an accessible investment.",
+        "features": [
+          "High-stability optical system ensuring reproducible results.",
+          "Compatible with multiple methodologies, including endpoint, kinetic, and fixed-time.",
+          "LCD screen with an intuitive menu for quick test programming.",
+          "Internal memory to store results and facilitate subsequent consultation."
+        ]
+      }
+    },
+    {
+      "id": "milenium-iii",
+      "category": "diagnostico",
+      "brand": "Awareness Technology",
+      "image": "assets/img/products/milenium-III.png",
+      "es": {
+        "name": "Analizador de Química Semi Automático Milenium III",
+        "description": "Analizador de química semiautomático compacto que ofrece flexibilidad de pruebas y desempeño estable para laboratorios de mediano volumen.",
+        "features": [
+          "Sistema de lectura fotométrica de alta sensibilidad para resultados confiables.",
+          "Compatible con una amplia variedad de reactivos de química clínica.",
+          "Bajo requerimiento de mantenimiento gracias a su diseño robusto y eficiente.",
+          "Interfaz amigable que permite configurar y ejecutar pruebas de forma rápida y segura."
+        ]
+      },
+      "en": {
+        "name": "Milenium III Semi-Automatic Chemistry Analyzer",
+        "description": "Compact semi-automatic chemistry analyzer offering testing flexibility and stable performance for medium-volume laboratories.",
+        "features": [
+          "High-sensitivity photometric reading system for reliable results.",
+          "Compatible with a wide variety of clinical chemistry reagents.",
+          "Low maintenance requirements thanks to its robust and efficient design.",
+          "Friendly interface that allows quick and safe test configuration and execution."
+        ]
+      }
+    },
+    {
+      "id": "gem-premier-3000",
+      "category": "especializado",
+      "brand": "IL",
+      "image": "assets/img/products/premier-3000.png",
+      "es": {
+        "name": "Analizador de Gases Arteriales GEM Premier 3000",
+        "description": "Sistema con gestión de calidad inteligente IQM que simplifica y estandariza los análisis de sangre total, entregando resultados de calidad rápidos en el laboratorio o en el punto de atención.",
+        "features": [
+          "Proporciona resultados rápidos para apoyar la toma de decisiones en pacientes críticos y de emergencia.",
+          "Incorpora cartuchos GEM PAK® que integran reactivos, sensores y soluciones en un solo consumible, simplificando el mantenimiento.",
+          "Realiza calibraciones automáticas que garantizan resultados precisos y consistentes en cada análisis.",
+          "Permite la medición simultánea de pH, PO₂, PCO₂, electrolitos y otros parámetros esenciales en una sola muestra."
+        ]
+      },
+      "en": {
+        "name": "GEM Premier 3000 Blood Gas Analyzer",
+        "description": "System with intelligent IQM quality management that simplifies and standardizes whole blood testing, delivering fast, quality results in the lab or at the point of care.",
+        "features": [
+          "Provides fast results to support decision-making in critical and emergency patients.",
+          "Incorporates GEM PAK® cartridges that integrate reagents, sensors, and solutions into a single consumable, simplifying maintenance.",
+          "Performs automatic calibrations to ensure precise and consistent results in every analysis.",
+          "Allows simultaneous measurement of pH, PO₂, PCO₂, electrolytes, and other essential parameters in a single sample."
+        ]
+      }
+    },
+    {
+      "id": "st-200-pro",
+      "category": "especializado",
+      "brand": "Sensa Core",
+      "image": "assets/img/products/st-200.png",
+      "es": {
+        "name": "Analizador de Electrolitos ST-200 Pro",
+        "description": "Diseñado para mediciones cuantitativas de sodio, potasio, calcio ionizado, litio, pH y cloro en sangre entera, suero, plasma, LCR y orina diluida, útil para el diagnóstico y monitoreo de desequilibrios electrolíticos.",
+        "features": [
+          "Tecnología ISE de alta precisión para la medición de sodio (Na⁺), potasio (K⁺) y cloro (Cl⁻).",
+          "Bajo volumen de muestra, optimizando el análisis de pacientes pediátricos y críticos.",
+          "Pantalla táctil con interfaz intuitiva que facilita la operación y configuración del equipo.",
+          "Sistema automático de calibración y limpieza que reduce la intervención del operador."
+        ]
+      },
+      "en": {
+        "name": "ST-200 Pro Electrolyte Analyzer",
+        "description": "Designed for quantitative measurement of sodium, potassium, ionized calcium, lithium, pH and chloride in whole blood, serum, plasma, CSF and diluted urine, supporting diagnosis and monitoring of electrolyte imbalances.",
+        "features": [
+          "High-precision ISE technology for measuring sodium (Na⁺), potassium (K⁺), and chloride (Cl⁻).",
+          "Low sample volume, optimizing analysis for pediatric and critical patients.",
+          "Touch screen with an intuitive interface that facilitates equipment operation and configuration.",
+          "Automatic calibration and cleaning system that reduces operator intervention."
+        ]
+      }
+    },
+    {
+      "id": "gem-premier-3500",
+      "category": "especializado",
+      "brand": "IL",
+      "image": "assets/img/products/premier-3500.png",
+      "es": {
+        "name": "Analizador de Gases Arteriales GEM Premier 3500",
+        "description": "Análisis de sangre integral: mide pH, gases en sangre (PO2, PCO2), electrolitos (Na+, K+, Cl-, Ca+2), metabolitos (glucosa, lactato), hematocrito y coximetría. Cartucho GEM PAK desechable multiuso que facilita el manejo y reduce el mantenimiento.",
+        "features": [
+          "Analiza múltiples parámetros críticos en un solo proceso, mejorando la eficiencia del laboratorio.",
+          "Sistema inteligente de control de calidad automático que garantiza resultados confiables.",
+          "Cartucho GEM PAK® de reemplazo rápido que reduce significativamente los tiempos de mantenimiento.",
+          "Conectividad con sistemas de información hospitalaria (LIS/HIS) para una gestión eficiente de los resultados."
+        ]
+      },
+      "en": {
+        "name": "GEM Premier 3500 Blood Gas Analyzer",
+        "description": "Comprehensive blood analysis measuring pH, blood gases (PO2, PCO2), electrolytes (Na+, K+, Cl-, Ca+2), metabolites (glucose, lactate), hematocrit and co-oximetry. Multi-use disposable GEM PAK cartridge simplifies handling and reduces maintenance.",
+        "features": [
+          "Analyzes multiple critical parameters in a single process, improving laboratory efficiency.",
+          "Intelligent automatic quality control system ensuring reliable results.",
+          "Quick-replacement GEM PAK® cartridge that significantly reduces maintenance downtime.",
+          "Connectivity with hospital information systems (LIS/HIS) for efficient results management."
+        ]
+      }
+    },
+    {
+      "id": "fluorecare",
+      "category": "especializado",
+      "brand": "Microprofit Biotech",
+      "image": "assets/img/products/inmunofluorescencia-fluorecare.png",
+      "es": {
+        "name": "Analizador de Inmunofluorescencia Fluorecare",
+        "description": "Sistema cerrado que reporta resultados cuantitativos con calibración automática mediante chip. Entrega resultados en menos de 15 minutos a partir de sangre entera o suero/plasma.",
+        "features": [
+          "Alta sensibilidad analítica para la detección temprana de marcadores infecciosos, cardíacos y hormonales.",
+          "Resultados en pocos minutos, optimizando la atención en laboratorios y servicios de urgencias.",
+          "Equipo compacto y portátil, ideal para laboratorios clínicos y puntos de atención (POCT).",
+          "Compatible con una amplia gama de kits de inmunofluorescencia del fabricante."
+        ]
+      },
+      "en": {
+        "name": "Fluorecare Immunofluorescence Analyzer",
+        "description": "Closed system delivering quantitative results with automatic chip calibration. Produces results in under 15 minutes from whole blood or serum/plasma.",
+        "features": [
+          "High analytical sensitivity for early detection of infectious, cardiac, and hormonal markers.",
+          "Results in just a few minutes, optimizing care in laboratories and emergency departments.",
+          "Compact and portable equipment, ideal for clinical laboratories and point-of-care testing (POCT).",
+          "Compatible with a wide range of immunofluorescence kits from the manufacturer."
+        ]
+      }
+    },
+    {
+      "id": "ecl-8000",
+      "category": "especializado",
+      "brand": "Lifotronic",
+      "image": "assets/img/products/ecl-8000.png",
+      "es": {
+        "name": "Analizador Automático de Electroquimioluminiscencia ECL-8000",
+        "description": "Analizador totalmente automatizado de 86 pruebas por hora basado en el inmunoensayo de electroquimioluminiscencia (ECLIA) más avanzado, con más de 90 parámetros disponibles que cubren tiroides, fertilidad, marcadores tumorales, función cardíaca, inflamación y metabolismo óseo.",
+        "features": [
+          "Tecnología de electroquimioluminiscencia que proporciona alta sensibilidad y excelente especificidad diagnóstica.",
+          "Procesamiento automatizado de muestras con carga continua de reactivos y consumibles.",
+          "Alto rendimiento para laboratorios de mediano y alto volumen de trabajo.",
+          "Software avanzado para control de calidad, calibración y gestión de resultados."
+        ]
+      },
+      "en": {
+        "name": "ECL-8000 Automatic Electrochemiluminescence Analyzer",
+        "description": "Fully automated analyzer running 86 tests per hour based on advanced electrochemiluminescence immunoassay (ECLIA), with more than 90 parameters covering thyroid, fertility, tumor markers, cardiac function, inflammation and bone metabolism.",
+        "features": [
+          "Electrochemiluminescence technology providing high sensitivity and excellent diagnostic specificity.",
+          "Automated sample processing with continuous loading of reagents and consumables.",
+          "High throughput suitable for medium to high-volume laboratories.",
+          "Advanced software for quality control, calibration, and results management."
+        ]
+      }
+    },
+    {
+      "id": "stat-fax-4200",
+      "category": "especializado",
+      "brand": "Awareness Technology",
+      "image": "assets/img/products/fax-4200.png",
+      "es": {
+        "name": "Analizador de ELISAS STAT FAX 4200 Microplaca",
+        "description": "Lector de microplacas para pruebas de ELISAS, ideal para el diagnóstico serológico e inmunológico de rutina en laboratorios clínicos.",
+        "features": [
+          "Sistema óptico de alta resolución que garantiza lecturas fotométricas precisas.",
+          "Compatible con microplacas estándar de 96 pozos para una amplia variedad de ensayos.",
+          "Software integrado para el cálculo automático de resultados y curvas de calibración.",
+          "Ideal para pruebas de enfermedades infecciosas, hormonas, marcadores tumorales y autoinmunidad."
+        ]
+      },
+      "en": {
+        "name": "STAT FAX 4200 Microplate ELISAS Analyzer",
+        "description": "Microplate reader for ELISAS testing, ideal for routine serological and immunological diagnostics in clinical laboratories.",
+        "features": [
+          "High-resolution optical system ensuring accurate photometric readings.",
+          "Compatible with standard 96-well microplates for a wide variety of assays.",
+          "Integrated software for automatic calculation of results and calibration curves.",
+          "Ideal for testing infectious diseases, hormones, tumor markers, and autoimmunity."
+        ]
+      }
+    },
+    {
+      "id": "acl-elite-pro",
+      "category": "especializado",
+      "brand": "IL",
+      "image": "assets/img/products/acl-elite.png",
+      "es": {
+        "name": "Analizador de Coagulación ACL-Elite Pro",
+        "description": "Analizador completamente automatizado para pruebas de hemostasia con capacidad de procesar ensayos coagulométricos, cromogénicos e inmunológicos, mostrando curvas de reacción y alarmas en un sistema compacto y fácil de usar.",
+        "features": [
+          "Realiza pruebas como TP, TTPa, Fibrinógeno, Dímero D y otros ensayos de coagulación según la configuración del sistema.",
+          "Sistema automatizado que minimiza la intervención del operador y mejora la productividad.",
+          "Tecnología de detección de alta sensibilidad para resultados precisos y reproducibles.",
+          "Gestión inteligente de controles de calidad y almacenamiento de resultados para un mejor seguimiento clínico."
+        ]
+      },
+      "en": {
+        "name": "ACL-Elite Pro Coagulation Analyzer",
+        "description": "Fully automated hemostasis analyzer capable of processing coagulometric, chromogenic and immunological assays, displaying reaction curves and alarms in a compact, easy-to-use system.",
+        "features": [
+          "Performs tests such as PT, APTT, Fibrinogen, D-Dimer, and other coagulation assays depending on the system configuration.",
+          "Automated system that minimizes operator intervention and enhances productivity.",
+          "High-sensitivity detection technology for precise and reproducible results.",
+          "Intelligent quality control management and result storage for better clinical tracking."
+        ]
+      }
+    },
+    {
+      "id": "diachek-c2",
+      "category": "especializado",
+      "brand": "Dialab",
+      "image": "assets/img/products/diachek-c2.png",
+      "es": {
+        "name": "Analizador de Coagulación Semiautomático Diachek C2",
+        "description": "Equipo de 2 canales para pruebas de PT, aPTT, TT, FIB, factores (FAC), dímero D y AT3, con un volumen de muestra/reactivo de 25 µl de muestra y 50 µl de reactivo.",
+        "features": [
+          "Compatible con las principales pruebas de coagulación utilizadas en la práctica clínica.",
+          "Bajo consumo de reactivos y reducido volumen de muestra por determinación.",
+          "Interfaz de usuario intuitiva que simplifica la programación y ejecución de los análisis.",
+          "Diseño compacto y robusto, ideal para laboratorios de bajo y mediano volumen de procesamiento."
+        ]
+      },
+      "en": {
+        "name": "Diachek C2 Semi-Automatic Coagulation Analyzer",
+        "description": "2-channel device for PT, aPTT, TT, FIB, factor assays (FAC), D-dimer and AT3 testing, with a sample/reagent volume of 25 µl sample and 50 µl reagent.",
+        "features": [
+          "Compatible with the main coagulation tests used in clinical practice.",
+          "Low reagent consumption and reduced sample volume per determination.",
+          "Intuitive user interface that simplifies test programming and execution.",
+          "Compact and robust design, ideal for low to medium throughput laboratories."
+        ]
+      }
+    },
+    {
+      "id": "centrifuga-plc-05",
+      "category": "laboratorio",
+      "brand": "Gemmy",
+      "image": "assets/img/products/plc-05.png",
+      "es": {
+        "name": "Centrífuga de 12 Puestos PLC-05",
+        "description": "Centrífuga de laboratorio de 12 puestos, robusta y de fácil operación para el procesamiento diario de muestras clínicas.",
+        "features": [
+          "Capacidad para procesar hasta 12 tubos simultáneamente, optimizando el rendimiento del laboratorio.",
+          "Control de velocidad ajustable para adaptarse a diferentes tipos de muestras y protocolos.",
+          "Sistema de seguridad con bloqueo automático de la tapa durante el funcionamiento.",
+          "Funcionamiento estable con bajo nivel de vibración y ruido para una operación segura y confiable."
+        ]
+      },
+      "en": {
+        "name": "PLC-05 12-Position Centrifuge",
+        "description": "Rugged, easy-to-operate 12-position laboratory centrifuge for the daily processing of clinical samples.",
+        "features": [
+          "Capacity to process up to 12 tubes simultaneously, optimizing laboratory throughput.",
+          "Adjustable speed control to adapt to different sample types and protocols.",
+          "Safety system with automatic lid lock during operation.",
+          "Stable performance with low noise and vibration levels for a safe and reliable operation."
+        ]
+      }
+    },
+    {
+      "id": "centrifuga-dcs-08",
+      "category": "laboratorio",
+      "brand": "Digisystem",
+      "image": "assets/img/products/dcs-08.png",
+      "es": {
+        "name": "Centrífuga de 8 Puestos DCS-08",
+        "description": "Centrífuga compacta de 8 puestos, ideal para laboratorios con espacio reducido y volúmenes moderados de muestras.",
+        "features": [
+          "Diseño compacto que facilita su instalación en espacios reducidos.",
+          "Temporizador programable para un control preciso del tiempo de centrifugación.",
+          "Motor de alto rendimiento que garantiza una velocidad constante durante todo el proceso.",
+          "Fabricación robusta para un funcionamiento continuo y una larga vida útil."
+        ]
+      },
+      "en": {
+        "name": "DCS-08 8-Position Centrifuge",
+        "description": "Compact 8-position centrifuge, ideal for laboratories with limited space and moderate sample volumes.",
+        "features": [
+          "Compact design for easy installation in limited spaces.",
+          "Programmable timer for precise control of centrifugation time.",
+          "High-performance motor ensuring consistent speed throughout the process.",
+          "Robust manufacturing for continuous operation and long lifespan."
+        ]
+      }
+    },
+    {
+      "id": "centrifuga-dscc-024",
+      "category": "laboratorio",
+      "brand": "Digisystem",
+      "image": "assets/img/products/dscc-024.png",
+      "es": {
+        "name": "Centrífuga Digital de 24 Puestos DSCC-024",
+        "description": "Centrífuga digital de alta capacidad con 24 puestos, control electrónico de velocidad y tiempo para mayor precisión en el procesamiento de muestras.",
+        "features": [
+          "Capacidad para centrifugar 24 tubos simultáneamente, aumentando la productividad.",
+          "Panel digital con visualización de velocidad y tiempo de operación.",
+          "Control electrónico de velocidad para obtener resultados precisos y reproducibles.",
+          "Sistema de protección contra desbalance que incrementa la seguridad del equipo."
+        ]
+      },
+      "en": {
+        "name": "DSCC-024 Digital 24-Position Centrifuge",
+        "description": "High-capacity digital centrifuge with 24 positions and electronic speed and time control for precise sample processing.",
+        "features": [
+          "Capacity to centrifuge 24 tubes simultaneously, increasing productivity.",
+          "Digital panel displaying speed and operating time.",
+          "Electronic speed control for precise and reproducible results.",
+          "Imbalance protection system that enhances equipment safety."
+        ]
+      }
+    },
+    {
+      "id": "microcentrifuga-kht-400",
+      "category": "laboratorio",
+      "brand": "Gemmy",
+      "image": "assets/img/products/kht-400.png",
+      "es": {
+        "name": "Microcentrífuga de 24 Puestos KHT-400",
+        "description": "Microcentrífuga de 24 puestos diseñada para el procesamiento eficiente de microtubos en el laboratorio clínico.",
+        "features": [
+          "Ideal para procedimientos de ADN, ARN, PCR y preparación de muestras biológicas.",
+          "Motor de alta velocidad que garantiza una separación rápida y eficiente.",
+          "Diseño compacto que facilita su ubicación sobre mesas de trabajo.",
+          "Sistema de seguridad con cierre automático de tapa durante la operación."
+        ]
+      },
+      "en": {
+        "name": "KHT-400 24-Position Microcentrifuge",
+        "description": "24-position microcentrifuge designed for efficient processing of microtubes in the clinical laboratory.",
+        "features": [
+          "Ideal for DNA, RNA, PCR procedures and biological sample preparation.",
+          "High-speed motor that ensures rapid and efficient separation.",
+          "Compact design for easy placement on workbenches.",
+          "Safety system with automatic lid lock during operation."
+        ]
+      }
+    },
+    {
+      "id": "bano-maria-gm-1il",
+      "category": "laboratorio",
+      "brand": "Gemmy",
+      "image": "assets/img/products/gm-1il.png",
+      "es": {
+        "name": "Baño de María GM-1IL",
+        "description": "Baño de María de laboratorio para incubación y control preciso de temperatura en procedimientos clínicos de rutina.",
+        "features": [
+          "Control digital de temperatura con alta precisión y excelente estabilidad térmica.",
+          "Cámara de acero inoxidable resistente a la corrosión y de fácil limpieza.",
+          "Distribución uniforme del calor para garantizar resultados homogéneos.",
+          "Sistema de protección contra sobrecalentamiento que brinda mayor seguridad durante el uso."
+        ]
+      },
+      "en": {
+        "name": "GM-1IL Water Bath",
+        "description": "Laboratory water bath for incubation and precise temperature control in routine clinical procedures.",
+        "features": [
+          "Digital temperature control with high precision and excellent thermal stability.",
+          "Corrosion-resistant and easy-to-clean stainless steel chamber.",
+          "Uniform heat distribution to ensure homogeneous results.",
+          "Overheating protection system providing greater safety during use."
+        ]
+      }
+    },
+ {
+      "id": "pipetas-multicanal",
+      "category": "laboratorio",
+      "brand": "HTL",
+      "image": "assets/img/products/pipetas-multicanal.png",
+      "es": {
+        "name": "Pipetas Multicanal de Volumen Variable LABMATE",
+        "description": "Pipetas multicanal de volumen variable que agilizan el pipeteo de series de muestras con precisión y ergonomía.",
+        "features": [
+          "Ajuste preciso del volumen mediante mecanismo ergonómico de fácil operación.",
+          "Diseño liviano que reduce la fatiga del usuario durante jornadas prolongadas.",
+          "Pistón de alta precisión que garantiza excelente exactitud y reproducibilidad.",
+          "Totalmente autoclavables para una esterilización segura y mayor vida útil."
+        ]
+      },
+      "en": {
+        "name": "LABMATE Variable-Volume Multichannel Pipettes",
+        "description": "Variable-volume multichannel pipettes that speed up sample-series pipetting with precision and ergonomic comfort.",
+        "features": [
+          "Precise volume adjustment via an easy-to-operate ergonomic mechanism.",
+          "Lightweight design that reduces user fatigue during prolonged working sessions.",
+          "High-precision piston ensuring excellent accuracy and reproducibility.",
+          "Fully autoclavable for safe sterilization and extended lifespan."
+        ]
+      }
+    },
+    {
+      "id": "pipetas-monocanal",
+      "category": "laboratorio",
+      "brand": "HTL",
+      "image": "assets/img/products/pipetas-monocanal.png",
+      "es": {
+        "name": "Pipetas Monocanal de Volumen Variable LABMATE",
+        "description": "Pipetas monocanal de volumen variable, disponibles en distintos rangos de medición identificados por color, para uso diario en el laboratorio.",
+        "features": [
+          "Amplio rango de volúmenes disponible para diferentes aplicaciones analíticas.",
+          "Diseño ergonómico que proporciona mayor comodidad durante el pipeteo repetitivo.",
+          "Alta exactitud y precisión, cumpliendo con estándares internacionales de laboratorio.",
+          "Componentes resistentes a productos químicos y completamente autoclavables para facilitar su mantenimiento."
+        ]
+      },
+      "en": {
+        "name": "LABMATE Variable-Volume Single-Channel Pipettes",
+        "description": "Variable-volume single-channel pipettes, available in color-coded measuring ranges for daily laboratory use.",
+        "features": [
+          "Wide range of volumes available for different analytical applications.",
+          "Ergonomic design providing greater comfort during repetitive pipetting.",
+          "High accuracy and precision, complying with international laboratory standards.",
+          "Chemical-resistant and fully autoclavable components for easy maintenance."
+        ]
+      }
+    },
+    {
+      "id": "reactivos-hematologia-cds",
+      "category": "reactivos-insumos",
+      "brand": "CDS",
+      "image": "assets/img/products/hematologa-cds.png",
+      "es": {
+        "name": "Reactivos de Hematología CDS",
+        "description": "Reactivos de hematología compatibles con equipos Beckman y Medonic, formulados para garantizar resultados confiables en el conteo celular.",
+        "features": [
+          "Formulados para ofrecer alta estabilidad y excelente reproducibilidad en los análisis hematológicos.",
+          "Compatibles con equipos Beckman Coulter y Medonic, asegurando un funcionamiento eficiente.",
+          "Fabricados bajo estrictos controles de calidad para garantizar resultados consistentes.",
+          "Disponibles en diferentes presentaciones para adaptarse a las necesidades del laboratorio."
+        ]
+      },
+      "en": {
+        "name": "CDS Hematology Reagents",
+        "description": "Hematology reagents compatible with Beckman and Medonic equipment, formulated to ensure reliable cell-count results.",
+        "features": [
+          "Formulated to offer high stability and excellent reproducibility in hematology analysis.",
+          "Compatible with Beckman Coulter and Medonic equipment, ensuring efficient operation.",
+          "Manufactured under strict quality control to guarantee consistent results.",
+          "Available in different packaging sizes to adapt to laboratory requirements."
+        ]
+      }
+    },
+    {
+      "id": "reactivos-coagulacion-il",
+      "category": "reactivos-insumos",
+      "brand": "IL",
+      "image": "assets/img/products/reactivos-de-coagulación.png",
+      "es": {
+        "name": "Reactivos de Coagulación IL",
+        "description": "Línea de reactivos de coagulación de referencia para pruebas de hemostasia con trazabilidad y calidad certificada.",
+        "features": [
+          "Alta sensibilidad para la determinación de parámetros de hemostasia.",
+          "Excelente estabilidad que prolonga la vida útil del reactivo durante su uso.",
+          "Compatibles con analizadores automáticos de coagulación IL.",
+          "Elaborados bajo estándares internacionales que garantizan resultados confiables."
+        ]
+      },
+      "en": {
+        "name": "IL Coagulation Reagents",
+        "description": "Reference coagulation reagent line for hemostasis testing with traceability and certified quality.",
+        "features": [
+          "High sensitivity for determining hemostasis parameters.",
+          "Excellent stability that extends the reagent's shelf life during use.",
+          "Compatible with IL automatic coagulation analyzers.",
+          "Developed under international standards to guarantee reliable results."
+        ]
+      }
+    },
+    {
+      "id": "reactivos-reactiva",
+      "category": "reactivos-insumos",
+      "brand": "Reactiva Search",
+      "image": "assets/img/products/pruebas-rapidas-reactiva-search.png",
+      "es": {
+        "name": "Reactivos de Química, Pruebas Rápidas y ELISA",
+        "description": "Amplia línea de reactivos de química clínica, pruebas rápidas y kits de ELISA de la marca Reactiva Search para el diagnóstico de laboratorio.",
+        "features": [
+          "Amplio portafolio para diversas aplicaciones de laboratorio clínico.",
+          "Alta precisión y reproducibilidad en cada determinación.",
+          "Excelente estabilidad durante el almacenamiento y uso.",
+          "Fabricados bajo procesos certificados de control de calidad."
+        ]
+      },
+      "en": {
+        "name": "Chemistry, Rapid Test & ELISA Reagents",
+        "description": "Extensive line of clinical chemistry reagents, rapid tests and ELISA kits from Reactiva Search for laboratory diagnostics.",
+        "features": [
+          "Wide portfolio for diverse clinical laboratory applications.",
+          "High accuracy and reproducibility in every determination.",
+          "Excellent stability during storage and use.",
+          "Manufactured under certified quality control processes."
+        ]
+      }
+    },
+    {
+      "id": "reactivos-xema",
+      "category": "reactivos-insumos",
+      "brand": "Xema Diagnostic",
+      "image": "assets/img/products/reactivos-para-elisa.png",
+      "es": {
+        "name": "Reactivos para ELISA",
+        "description": "Kits de reactivos para ELISA de la marca Xema Diagnostic, orientados a pruebas serológicas de alta sensibilidad.",
+        "features": [
+          "Alta sensibilidad y especificidad para un diagnóstico confiable.",
+          "Compatibles con lectores automáticos y semiautomáticos de microplacas.",
+          "Protocolos estandarizados que facilitan la ejecución de los ensayos.",
+          "Controles y calibradores incluidos según el tipo de prueba."
+        ]
+      },
+      "en": {
+        "name": "ELISA Reagents",
+        "description": "ELISA reagent kits from Xema Diagnostic, designed for high-sensitivity serological testing.",
+        "features": [
+          "High sensitivity and specificity for a reliable diagnosis.",
+          "Compatible with automatic and semi-automatic microplate readers.",
+          "Standardized protocols that facilitate assay execution.",
+          "Controls and calibrators included depending on the test type."
+        ]
+      }
+    },
+    {
+      "id": "pruebas-accubiotech",
+      "category": "reactivos-insumos",
+      "brand": "Accubiotech",
+      "image": "assets/img/products/pruebas-inmunocromatográficas.png",
+      "es": {
+        "name": "Pruebas Inmunocromatográficas Rápidas Accubiotech",
+        "description": "Pruebas rápidas de diagnóstico in vitro basadas en inmunocromatografía, con resultados confiables en minutos para el punto de atención.",
+        "features": [
+          "Resultados rápidos en pocos minutos.",
+          "Fácil interpretación mediante bandas visuales claramente definidas.",
+          "No requieren equipos especializados para su procesamiento.",
+          "Alta sensibilidad y especificidad para aplicaciones clínicas y de tamizaje."
+        ]
+      },
+      "en": {
+        "name": "Accubiotech Rapid Immunochromatographic Tests",
+        "description": "In-vitro rapid diagnostic tests based on immunochromatography, delivering reliable point-of-care results in minutes.",
+        "features": [
+          "Fast results in just a few minutes.",
+          "Easy interpretation using clearly defined visual bands.",
+          "Do not require specialized equipment for processing.",
+          "High sensitivity and specificity for clinical and screening applications."
+        ]
+      }
+    },
+    {
+      "id": "pruebas-all-test",
+      "category": "reactivos-insumos",
+      "brand": "All Test Biotech",
+      "image": "assets/img/products/pruebas-inmunocromatográficas-all-test-biotech.png",
+      "es": {
+        "name": "Pruebas Inmunocromatográficas Rápidas All Test Biotech",
+        "description": "Kits de pruebas rápidas inmunocromatográficas de la marca All Test Biotech, diseñados para un diagnóstico ágil y preciso.",
+        "features": [
+          "Procedimiento sencillo que facilita su utilización en diferentes entornos clínicos.",
+          "Excelente desempeño diagnóstico respaldado por controles de calidad.",
+          "Presentación individual que garantiza la conservación del producto.",
+          "Amplia variedad de pruebas disponibles para diferentes necesidades diagnósticas."
+        ]
+      },
+      "en": {
+        "name": "All Test Biotech Rapid Immunochromatographic Tests",
+        "description": "Rapid immunochromatographic test kits from All Test Biotech, designed for fast and accurate diagnosis.",
+        "features": [
+          "Simple procedure facilitating its use in different clinical environments.",
+          "Excellent diagnostic performance backed by quality controls.",
+          "Individual packaging ensuring product preservation.",
+          "Wide variety of tests available for different diagnostic needs."
+        ]
+      }
+    },
+    {
+      "id": "reactivos-diapro",
+      "category": "reactivos-insumos",
+      "brand": "Diapro",
+      "image": "assets/img/products/reactivos-para-pruebas-de-elisa-diapro.png",
+      "es": {
+        "name": "Reactivos para Pruebas de ELISA Diapro",
+        "description": "Reactivos de ELISA de la marca Diapro para el tamizaje y diagnóstico serológico en laboratorios clínicos.",
+        "features": [
+          "Alta sensibilidad diagnóstica para la detección temprana de enfermedades.",
+          "Excelente reproducibilidad entre diferentes lotes de fabricación.",
+          "Compatibles con los principales lectores de microplacas del mercado.",
+          "Incluyen controles de calidad que respaldan la confiabilidad del análisis."
+        ]
+      },
+      "en": {
+        "name": "Diapro ELISA Test Reagents",
+        "description": "Diapro ELISA reagents for serological screening and diagnosis in clinical laboratories.",
+        "features": [
+          "High diagnostic sensitivity for the early detection of diseases.",
+          "Excellent reproducibility between different manufacturing lots.",
+          "Compatible with the main microplate readers on the market.",
+          "Include quality controls that support the reliability of the analysis."
+        ]
+      }
+    },
+    {
+      "id": "pack-gases-gem",
+      "category": "reactivos-insumos",
+      "brand": "IL",
+      "image": "assets/img/products/gases-arteriales-premier-3000.png",
+      "es": {
+        "name": "Pack para Gases Arteriales GEM Premier 3000",
+        "description": "Cartucho desechable multiuso para el analizador GEM Premier 3000, que facilita el manejo del equipo y reduce el mantenimiento.",
+        "features": [
+          "Sistema todo en uno que simplifica el reemplazo de consumibles.",
+          "Reduce significativamente los tiempos de mantenimiento del equipo.",
+          "Garantiza calibraciones automáticas y resultados de alta precisión.",
+          "Diseñado para optimizar el rendimiento y la continuidad operativa del analizador."
+        ]
+      },
+      "en": {
+        "name": "GEM Premier 3000 Blood Gas Pack",
+        "description": "Multi-use disposable cartridge for the GEM Premier 3000 analyzer, simplifying equipment handling and reducing maintenance.",
+        "features": [
+          "All-in-one system that simplifies consumable replacement.",
+          "Significantly reduces equipment maintenance times.",
+          "Ensures automatic calibrations and high-precision results.",
+          "Designed to optimize analyzer performance and operational continuity."
+        ]
+      }
+    },
+    {
+      "id": "pack-electrolitos-prolyte",
+      "category": "reactivos-insumos",
+      "brand": "Diamond Diagnostics",
+      "image": "assets/img/products/pack-de-electrolitos-prolyte.png",
+      "es": {
+        "name": "Pack de Electrolitos Prolyte",
+        "description": "Pack de electrolitos Prolyte de Diamond Diagnostics, formulado para mantener la precisión y estabilidad de los analizadores de electrolitos.",
+        "features": [
+          "Proporciona mediciones precisas de sodio, potasio y cloro.",
+          "Excelente estabilidad que prolonga el tiempo de utilización del reactivo.",
+          "Compatible con equipos ProLyte y otras plataformas compatibles.",
+          "Formulación que reduce el riesgo de contaminación y mejora la confiabilidad analítica."
+        ]
+      },
+      "en": {
+        "name": "Prolyte Electrolyte Pack",
+        "description": "Prolyte electrolyte pack from Diamond Diagnostics, formulated to preserve the accuracy and stability of electrolyte analyzers.",
+        "features": [
+          "Provides accurate measurements of sodium, potassium, and chloride.",
+          "Excellent stability that extends the reagent's usability period.",
+          "Compatible with ProLyte equipment and other compatible platforms.",
+          "Formulation that reduces contamination risk and improves analytical reliability."
+        ]
+      }
+    },
+    {
+      "id": "reactivos-biopanda",
+      "category": "reactivos-insumos",
+      "brand": "Biopanda Reagents",
+      "image": "assets/img/products/pruebas-rapidas-inmunocromatográficas-biopanda.png",
+      "es": {
+        "name": "Reactivos de Pruebas Rápidas Inmunocromatográficas Biopanda",
+        "description": "Pruebas rápidas inmunocromatográficas de la marca Biopanda Reagents para diagnósticos ágiles en el punto de atención.",
+        "features": [
+          "Resultados confiables en pocos minutos.",
+          "Fácil almacenamiento y transporte gracias a su presentación individual.",
+          "Alta sensibilidad y especificidad según el tipo de ensayo.",
+          "Ideales para laboratorios clínicos, hospitales y centros de atención primaria."
+        ]
+      },
+      "en": {
+        "name": "Biopanda Rapid Immunochromatographic Reagents",
+        "description": "Rapid immunochromatographic tests from Biopanda Reagents for agile point-of-care diagnostics.",
+        "features": [
+          "Reliable results in just a few minutes.",
+          "Easy storage and transport thanks to individual packaging.",
+          "High sensitivity and specificity depending on the assay type.",
+          "Ideal for clinical laboratories, hospitals, and primary care centers."
+        ]
+      }
+    },
+    {
+      "id": "reactivos-egens",
+      "category": "reactivos-insumos",
+      "brand": "Egens",
+      "image": "assets/img/products/reactivos-de-pruebas-rapidas-inmunocromatográficas-egens.png",
+      "es": {
+        "name": "Reactivos de Pruebas Rápidas Inmunocromatográficas Egens",
+        "description": "Pruebas rápidas inmunocromatográficas de la marca Egens, formuladas para ofrecer resultados claros y confiables.",
+        "features": [
+          "Procedimiento simple que facilita su implementación en diferentes áreas clínicas.",
+          "Excelente desempeño analítico con resultados rápidos y confiables.",
+          "Amplio portafolio de pruebas para distintas aplicaciones diagnósticas.",
+          "Fabricados bajo estrictos estándares internacionales de calidad."
+        ]
+      },
+      "en": {
+        "name": "Egens Rapid Immunochromatographic Reagents",
+        "description": "Rapid immunochromatographic tests from Egens, formulated to deliver clear and reliable results.",
+        "features": [
+          "Simple procedure facilitating its implementation in different clinical areas.",
+          "Excellent analytical performance with fast and reliable results.",
+          "Wide variety of tests available for different diagnostic applications.",
+          "Manufactured under strict international quality standards."
+        ]
+      }
+    },
+    {
+      "id": "biobase-reactivo",
+      "category": "reactivos-insumos",
+      "brand": "Biobase",
+      "image": "assets/img/products/reactivo-biobase-creatinina.png",
+      "es": {
+        "name": "Reactivo BIOBASE (Creatinina)",
+        "description": "Reactivo de química clínica BIOBASE para la determinación de creatinina, con presentación en viales listos para su uso en el laboratorio.",
+        "features": [
+          "Formulados para garantizar alta precisión y repetibilidad en cada análisis.",
+          "Excelente estabilidad química que contribuye a prolongar la vida útil del producto.",
+          "Compatibles con una amplia variedad de pruebas bioquímicas de rutina y especializadas.",
+          "Elaborados bajo rigurosos controles de calidad para asegurar resultados confiables y consistentes."
+        ]
+      },
+      "en": {
+        "name": "BIOBASE Reagent (Creatinine)",
+        "description": "BIOBASE clinical chemistry reagent for creatinine determination, supplied in ready-to-use vials for laboratory testing.",
+        "features": [
+          "Formulated to guarantee high precision and repeatability in every analysis.",
+          "Excellent chemical stability contributing to extending the product's shelf life.",
+          "Compatible with a wide variety of routine and specialized biochemical tests.",
+          "Developed under rigorous quality control to ensure reliable and consistent results."
+        ]
+      }
+    },
+    {
+      "id": "ventilador-v3",
+      "category": "hospitalarios",
+      "brand": "Comen",
+      "image": "assets/img/products/v3-comen.png",
+      "es": {
+        "name": "Ventilador para Cuidados Intensivos V3",
+        "description": "Ventilador equipado con hasta 12 modos de ventilación para satisfacer diversas aplicaciones clínicas, incluyendo modos avanzados como VS y PSV-S/T para mejorar la efectividad del tratamiento.",
+        "features": [
+          "Múltiples modos de ventilación invasiva y no invasiva para adaptarse a diferentes condiciones clínicas.",
+          "Pantalla táctil de alta resolución con visualización en tiempo real de curvas y parámetros respiratorios.",
+          "Sistema inteligente de alarmas que garantiza una respuesta inmediata ante cualquier alteración del paciente.",
+          "Diseño ergonómico con interfaz intuitiva que facilita su operación en unidades de cuidados intensivos."
+        ]
+      },
+      "en": {
+        "name": "V3 Intensive Care Ventilator",
+        "description": "Ventilator equipped with up to 12 ventilation modes to address diverse clinical applications, including advanced VS and PSV-S/T modes that improve treatment effectiveness.",
+        "features": [
+          "Multiple invasive and non-invasive ventilation modes to adapt to different clinical conditions.",
+          "High-resolution touchscreen with real-time visualization of curves and respiratory parameters.",
+          "Intelligent alarm system ensuring an immediate response to any patient alteration.",
+          "Ergonomic design with an intuitive interface facilitating operation in intensive care units."
+        ]
+      }
+    },
+    {
+      "id": "bomba-en-s7",
+      "category": "hospitalarios",
+      "brand": "Enmind",
+      "image": "assets/img/products/en-s7.png",
+      "es": {
+        "name": "Bomba de Infusión EN-S7",
+        "description": "Pantalla táctil a color LCD de 3 pulgadas, compatible con jeringas de 2/3ml a 50/60ml con reconocimiento automático de marca y tamaño tras la calibración. Se adapta a todas las marcas de jeringas.",
+        "features": [
+          "Alta precisión en el control del flujo de infusión para una terapia segura y confiable.",
+          "Alarmas visuales y sonoras para detectar oclusiones, aire en línea y batería baja.",
+          "Pantalla LCD de fácil lectura con programación intuitiva.",
+          "Batería recargable que garantiza la continuidad del tratamiento durante traslados o cortes eléctricos."
+        ]
+      },
+      "en": {
+        "name": "EN-S7 Infusion Pump",
+        "description": "3-inch color LCD touchscreen, compatible with 2/3ml to 50/60ml syringes with automatic brand and size recognition after calibration. Compatible with all syringe brands.",
+        "features": [
+          "High precision in infusion flow control for a safe and reliable therapy.",
+          "Visual and audible alarms to detect occlusions, air-in-line, and low battery.",
+          "Easy-to-read LCD screen with intuitive programming.",
+          "Rechargeable battery ensuring treatment continuity during patient transfers or power outages."
+        ]
+      }
+    },
+    {
+      "id": "bomba-en-v7-smart",
+      "category": "hospitalarios",
+      "brand": "Enmind",
+      "image": "assets/img/products/bomba-de-infusión-en-v7-smart.png",
+      "es": {
+        "name": "Bomba de Infusión EN-V7 Smart",
+        "description": "Pantalla táctil LCD de 3 pulgadas con modos de infusión en ml/h, frecuencia, tiempo, peso corporal, goteo, carga-dosis, rampa arriba/abajo, secuencia y modo farmacoteca.",
+        "features": [
+          "Biblioteca de medicamentos configurable que contribuye a reducir errores de medicación.",
+          "Sistema de seguridad con múltiples alarmas para proteger al paciente durante la infusión.",
+          "Pantalla táctil de alta definición para una programación rápida y sencilla.",
+          "Conectividad para integración con plataformas hospitalarias y gestión centralizada de equipos."
+        ]
+      },
+      "en": {
+        "name": "EN-V7 Smart Infusion Pump",
+        "description": "3-inch LCD touchscreen with infusion modes in ml/h, frequency, time, body weight, drip rate, loading dose, ramp up/down, sequence and drug-library mode.",
+        "features": [
+          "Configurable drug library that helps reduce medication errors.",
+          "Safety system with multiple alarms to protect the patient during infusion.",
+          "High-definition touchscreen for quick and easy programming.",
+          "Connectivity for integration with hospital platforms and centralized equipment management."
+        ]
+      }
+    },
+    {
+      "id": "desfibrilador-s5-s3",
+      "category": "hospitalarios",
+      "brand": "Comen",
+      "image": "assets/img/products/s5_s3.png",
+      "es": {
+        "name": "Desfibrilador Monitor S5/S3",
+        "description": "Desfibrilador y monitor de diseño simple e intuitivo, ideado para responder rápidamente ante urgencias, con monitoreo del paciente desde el momento cero y sistema bifásico aplicable en forma manual y automática.",
+        "features": [
+          "Monitoriza ECG, frecuencia cardíaca, SpO₂ y otros parámetros según la configuración del equipo.",
+          "Desfibrilación manual, sincronizada y modo DEA para diferentes escenarios clínicos.",
+          "Pantalla a color de alta resolución para una visualización clara de los datos del paciente.",
+          "Memoria interna para almacenamiento de eventos y revisión posterior de procedimientos."
+        ]
+      },
+      "en": {
+        "name": "S5/S3 Defibrillator Monitor",
+        "description": "Defibrillator and monitor with a simple, intuitive design for rapid emergency response, monitoring the patient from the very first moment with a biphasic system usable in manual and automatic mode.",
+        "features": [
+          "Monitors ECG, heart rate, SpO₂, and other parameters depending on the equipment configuration.",
+          "Manual and synchronized defibrillation, plus AED mode for different clinical scenarios.",
+          "High-resolution color screen for clear visualization of patient data.",
+          "Internal memory for event storage and subsequent procedure review."
+        ]
+      }
+    },
+    {
+      "id": "ventilador-vg70",
+      "category": "hospitalarios",
+      "brand": "AeonMed",
+      "image": "assets/img/products/vg70.png",
+      "es": {
+        "name": "Ventilador Mecánico VG70",
+        "description": "Ventilador de UCI completo que incluye BIVENT y PRVC. Compacto, con batería de gran capacidad, sin compresor de aire, y movilidad intrahospitalaria en carrito, cama o péndulo de techo.",
+        "features": [
+          "Amplia variedad de modos ventilatorios para adaptarse a las necesidades clínicas del paciente.",
+          "Monitoreo continuo de presión, volumen, flujo y parámetros respiratorios.",
+          "Sistema inteligente de compensación de fugas que mejora la eficiencia de la ventilación.",
+          "Interfaz gráfica intuitiva con pantalla táctil de gran formato para facilitar la operación."
+        ]
+      },
+      "en": {
+        "name": "VG70 Mechanical Ventilator",
+        "description": "Full-featured ICU ventilator including BIVENT and PRVC. Compact, with a high-capacity battery, no air compressor required, and intra-hospital mobility on a cart, bed or ceiling pendant.",
+        "features": [
+          "Wide variety of ventilatory modes to adapt to the patient's clinical needs.",
+          "Continuous monitoring of pressure, volume, flow, and respiratory parameters.",
+          "Intelligent leak compensation system improving ventilation efficiency.",
+          "Intuitive graphical interface with a large-format touchscreen for easy operation."
+        ]
+      }
+    },
+    {
+      "id": "anestesia-wato-ex20",
+      "category": "hospitalarios",
+      "brand": "Mindray",
+      "image": "assets/img/products/ex-20.png",
+      "es": {
+        "name": "Máquina de Anestesia WATO EX-20",
+        "description": "Para pacientes adultos y pediátricos. Ventilador electrónico controlado por volumen, tres gases (O2, N2O y aire), alarmas audibles y visuales, monitorización de O2 y FiO2, y batería de litio de 90 minutos.",
+        "features": [
+          "Ventilador integrado con múltiples modos de ventilación para diferentes tipos de pacientes.",
+          "Monitoreo continuo de parámetros respiratorios y concentración de gases anestésicos.",
+          "Sistema de alarmas inteligentes que incrementa la seguridad durante la intervención quirúrgica.",
+          "Diseño ergonómico con amplio espacio para accesorios y fácil acceso a los controles."
+        ]
+      },
+      "en": {
+        "name": "WATO EX-20 Anesthesia Machine",
+        "description": "For adult and pediatric patients. Electronically volume-controlled ventilator, three gases (O2, N2O and air), audible and visual alarms, O2 and FiO2 monitoring, and a 90-minute lithium battery.",
+        "features": [
+          "Integrated ventilator with multiple ventilation modes for different patient types.",
+          "Continuous monitoring of respiratory parameters and anesthetic gas concentration.",
+          "Intelligent alarm system increasing safety during surgical interventions.",
+          "Ergonomic design with ample space for accessories and easy access to controls."
+        ]
+      }
+    },
+    {
+      "id": "ligasure-ls10",
+      "category": "hospitalarios",
+      "brand": "Valleylab",
+      "image": "assets/img/products/ls10.png",
+      "es": {
+        "name": "LigaSure LS10",
+        "description": "Generador electroquirúrgico que incorpora la tecnología de sellado de vasos LigaSure™ para procedimientos quirúrgicos de alta precisión.",
+        "features": [
+          "Tecnología de energía bipolar que proporciona un sellado vascular seguro y uniforme.",
+          "Reduce el sangrado intraoperatorio y mejora la eficiencia del procedimiento quirúrgico.",
+          "Disminuye el daño térmico en los tejidos circundantes gracias al control inteligente de energía.",
+          "Compatible con diferentes instrumentos quirúrgicos para múltiples especialidades médicas."
+        ]
+      },
+      "en": {
+        "name": "LigaSure LS10",
+        "description": "Electrosurgical generator featuring LigaSure™ vessel-sealing technology for high-precision surgical procedures.",
+        "features": [
+          "Bipolar energy technology providing secure and consistent vessel sealing.",
+          "Reduces intraoperative bleeding and improves surgical procedure efficiency.",
+          "Minimizes thermal damage to surrounding tissues thanks to intelligent energy control.",
+          "Compatible with different surgical instruments for multiple medical specialties."
+        ]
+      }
+    },
+    {
+      "id": "mesa-cirugia",
+      "category": "hospitalarios",
+      "brand": "Lab Technology",
+      "image": "assets/img/products/mesa-de-cirugía-electromecánica.png",
+      "es": {
+        "name": "Mesa de Cirugía Electromecánica",
+        "description": "Mesa quirúrgica electromecánica diseñada para operaciones de alta complejidad, con sistema de control de mano que satisface diversas demandas de cirugía general.",
+        "features": [
+          "Ajuste eléctrico o hidráulico de altura, inclinación y posiciones quirúrgicas.",
+          "Estructura fabricada en acero inoxidable de alta resistencia y fácil desinfección.",
+          "Base de alta estabilidad que garantiza seguridad durante procedimientos de larga duración.",
+          "Compatible con una amplia gama de accesorios para distintas especialidades quirúrgicas."
+        ]
+      },
+      "en": {
+        "name": "Electromechanical Surgical Table",
+        "description": "Electromechanical surgical table designed for high-complexity operations, with a handheld control system that meets diverse general-surgery demands.",
+        "features": [
+          "Electric or hydraulic adjustment of height, tilt, and surgical positions.",
+          "Structure manufactured in high-resistance stainless steel for easy disinfection.",
+          "High-stability base ensuring safety during long-duration procedures.",
+          "Compatible with a wide range of accessories for different surgical specialties."
+        ]
+      }
+    },
+    {
+      "id": "monitor-fetal-fm-200",
+      "category": "monitoreo",
+      "brand": "Biocare",
+      "image": "assets/img/products/fm-200.png",
+      "es": {
+        "name": "Monitor Fetal FM-200",
+        "description": "Equipo portátil y confiable para detectar la frecuencia cardíaca del feto y monitorear el índice de crecimiento fetal, con pantalla LCD de lectura en tiempo real e indicación de fuerza de señal.",
+        "features": [
+          "Monitoreo simultáneo de frecuencia cardíaca fetal, movimientos fetales y contracciones uterinas.",
+          "Pantalla LCD de alta resolución para una interpretación clara de los registros.",
+          "Impresora térmica integrada para la documentación inmediata de los estudios.",
+          "Memoria interna para almacenamiento y consulta de registros clínicos."
+        ]
+      },
+      "en": {
+        "name": "FM-200 Fetal Doppler Monitor",
+        "description": "Portable, reliable device for detecting fetal heart rate and monitoring fetal growth index, with a real-time LCD readout and signal-strength indication.",
+        "features": [
+          "Simultaneous monitoring of fetal heart rate, fetal movements, and uterine contractions.",
+          "High-resolution LCD screen for clear interpretation of records.",
+          "Integrated thermal printer for immediate documentation of studies.",
+          "Internal memory for storage and consultation of clinical records."
+        ]
+      }
+    },
+    {
+      "id": "monitor-fetal-c21",
+      "category": "monitoreo",
+      "brand": "Comen",
+      "image": "assets/img/products/c21.png",
+      "es": {
+        "name": "Monitor Fetal C21",
+        "description": "Monitor fetal de uso manual o continuo, con grabación del ritmo cardíaco fetal y registro de contracciones uterinas.",
+        "features": [
+          "Tecnología Doppler de alta sensibilidad para una detección precisa del ritmo cardíaco fetal.",
+          "Monitoreo continuo de contracciones uterinas durante el trabajo de parto.",
+          "Pantalla táctil con interfaz intuitiva para una operación sencilla.",
+          "Almacenamiento digital de datos para seguimiento y análisis clínico."
+        ]
+      },
+      "en": {
+        "name": "C21 Fetal Monitor",
+        "description": "Fetal monitor for manual or continuous use, recording fetal heart rhythm and uterine contractions.",
+        "features": [
+          "High-sensitivity Doppler technology for precise fetal heart rate detection.",
+          "Continuous monitoring of uterine contractions during labor.",
+          "Touchscreen with intuitive interface for simple operation.",
+          "Digital data storage for follow-up and clinical analysis."
+        ]
+      }
+    },
+    {
+      "id": "monitor-c80",
+      "category": "monitoreo",
+      "brand": "Comen",
+      "image": "assets/img/products/c80.png",
+      "es": {
+        "name": "Monitor Multiparámetros C80",
+        "description": "Diseñado para optimizar el rendimiento mediante la configuración de monitoreo de CO2, gases anestésicos (AG), BIS y hemodinámica no invasiva en un solo equipo, ideal para pacientes críticos.",
+        "features": [
+          "Monitoreo simultáneo de ECG, presión arterial, SpO₂, temperatura, respiración y frecuencia cardíaca.",
+          "Pantalla táctil de alta definición con visualización de curvas y tendencias en tiempo real.",
+          "Alarmas configurables para una respuesta inmediata ante cambios en el estado del paciente.",
+          "Conectividad con sistemas hospitalarios para gestión y almacenamiento de información clínica."
+        ]
+      },
+      "en": {
+        "name": "C80 Multiparameter Monitor",
+        "description": "Designed to optimize performance through CO2, anesthetic gas (AG), BIS and non-invasive hemodynamic monitoring in a single device, ideal for critical patients.",
+        "features": [
+          "Simultaneous monitoring of ECG, blood pressure, SpO₂, temperature, respiration, and heart rate.",
+          "High-definition touchscreen with real-time visualization of curves and trends.",
+          "Configurable alarms for immediate response to changes in patient status.",
+          "Connectivity with hospital systems for management and storage of clinical information."
+        ]
+      }
+    },
+    {
+      "id": "electrocardiografo-h12",
+      "category": "monitoreo",
+      "brand": "Comen",
+      "image": "assets/img/products/h12.png",
+      "es": {
+        "name": "Electrocardiógrafo H12",
+        "description": "Pantalla táctil LED HD de 10.4 pulgadas con tecnología de filtro digital de alta precisión que elimina variaciones en la línea base, entregando formas de onda de ECG reales y precisas.",
+        "features": [
+          "Adquisición simultánea de 12 derivaciones con alta precisión diagnóstica.",
+          "Interpretación automática del electrocardiograma como apoyo al diagnóstico clínico.",
+          "Pantalla a color de alta resolución para una visualización inmediata del trazado.",
+          "Memoria interna y conectividad USB para almacenamiento y transferencia de estudios."
+        ]
+      },
+      "en": {
+        "name": "H12 Electrocardiograph",
+        "description": "10.4-inch HD LED touchscreen with high-precision digital filtering technology that removes baseline variations, delivering accurate, real ECG waveforms.",
+        "features": [
+          "Simultaneous acquisition of 12 leads with high diagnostic accuracy.",
+          "Automatic electrocardiogram interpretation to support clinical diagnosis.",
+          "High-resolution color screen for immediate visualization of the waveform.",
+          "Internal memory and USB connectivity for study storage and transfer."
+        ]
+      }
+    },
+    {
+      "id": "incubadora-b3",
+      "category": "monitoreo",
+      "brand": "Comen",
+      "image": "assets/img/products/incubadora-neonatal-b3.png",
+      "es": {
+        "name": "Incubadora Neonatal B3",
+        "description": "Diseño de conducto simétrico que permite distribución uniforme de temperatura, con cortina de aire automática al abrir la puerta de acceso y 7 sensores de temperatura con protección triple contra sobretemperatura para proteger al bebé.",
+        "features": [
+          "Control automático de temperatura y humedad para mantener condiciones óptimas de desarrollo neonatal.",
+          "Sistema de circulación uniforme del aire que garantiza estabilidad térmica en todo el habitáculo.",
+          "Alarmas inteligentes para temperatura, alimentación eléctrica y funcionamiento del equipo.",
+          "Diseño ergonómico con accesos laterales que facilitan la atención del paciente sin alterar el ambiente interno."
+        ]
+      },
+      "en": {
+        "name": "B3 Neonatal Incubator",
+        "description": "Symmetric duct design providing even temperature distribution, an automatic air curtain when the access door opens, and 7 temperature sensors with triple overheat protection to keep the baby safe.",
+        "features": [
+          "Automatic temperature and humidity control to maintain optimal neonatal development conditions.",
+          "Uniform air circulation system ensuring thermal stability throughout the cabin.",
+          "Intelligent alarms for temperature, power supply, and equipment operation.",
+          "Ergonomic design with side access ports that facilitate patient care without disrupting the internal environment."
+        ]
+      }
+    }
+  ]
+}
