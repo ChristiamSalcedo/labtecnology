@@ -7,16 +7,16 @@
     "en": { "name": "Clinical Diagnostics", "tagline": "Automated hematology analyzers" }
   },
   {
-    "id": "especializado",
+    "id": "gasesarteriales",
     "icon": "quimica",
-    "es": { "name": "Análisis Especializado", "tagline": "Analizadores de bioquímica clínica" },
-    "en": { "name": "Specialized Analysis", "tagline": "Clinical chemistry analyzers" }
+    "es": { "name": "Gases Arteriales", "tagline": "Análisis de gases y electrólitos en sangre" },
+    "en": { "name": "Arterial Blood Gases", "tagline": "Blood gas and electrolyte analysis" }
   },
   {
     "id": "laboratorio",
     "icon": "electrolitos",
-    "es": { "name": "Equipos de Laboratorio", "tagline": "Análisis de gases y electrólitos en sangre" },
-    "en": { "name": "Laboratory Equipment", "tagline": "Blood gas and electrolyte analysis" }
+    "es": { "name": "Equipos de Laboratorio", "tagline": "Equipos de laboratorio de alta calidad" },
+    "en": { "name": "Laboratory Equipment", "tagline": "High-quality laboratory equipment" }
   },
   {
     "id": "reactivos-insumos",
@@ -222,7 +222,7 @@
     },
     {
       "id": "gem-premier-3000",
-      "category": "especializado",
+      "category": "gasesarteriales",
       "brand": "IL",
       "image": "assets/img/products/premier-3000.png",
       "es": {
@@ -248,7 +248,7 @@
     },
     {
       "id": "st-200-pro",
-      "category": "especializado",
+      "category": "gasesarteriales",
       "brand": "Sensa Core",
       "image": "assets/img/products/st-200.png",
       "es": {
@@ -274,7 +274,7 @@
     },
     {
       "id": "gem-premier-3500",
-      "category": "especializado",
+      "category": "gasesarteriales",
       "brand": "IL",
       "image": "assets/img/products/premier-3500.png",
       "es": {
@@ -299,8 +299,34 @@
       }
     },
     {
+      "id": "gem-premier-5000",
+      "category": "gasesarteriales",
+      "brand": "IL",
+      "image": "assets/img/products/premier-5000.png",
+      "es": {
+        "name": "Analizador de Gases Arteriales GEM Premier 5000",
+        "description": "Analizador automático de gases arteriales de última generación, diseñado para realizar pruebas críticas en sangre total con alta precisión y rapidez. Ideal para laboratorios clínicos, unidades de cuidados intensivos, emergencias y quirófanos.",
+        "features": [
+          "Tecnología Intelligent Quality Management (iQM®2) que realiza control de calidad continuo y automático, garantizando resultados confiables en cada análisis.",
+          "Permite la medición simultánea de gases arteriales, electrolitos, metabolitos, hematocrito y cooximetría, proporcionando una evaluación integral del estado del paciente.",
+          "Utiliza cartuchos GEM PAK® que integran reactivos, sensores y soluciones de calibración en un único consumible, reduciendo el mantenimiento y los tiempos de inactividad.",
+          "Conectividad con sistemas LIS/HIS y gestión inteligente de datos para una integración eficiente con la infraestructura informática del laboratorio y del hospital."
+        ]
+      },
+      "en": {
+        "name": "GEM Premier 5000 Blood Gas Analyzer",
+        "description": "State-of-the-art automatic arterial blood gas analyzer, designed to perform critical whole-blood tests with high precision and speed. Ideal for clinical laboratories, intensive care units, emergency departments, and operating rooms.",
+        "features": [
+          "Intelligent Quality Management (iQM®2) technology performs continuous, automated quality control, ensuring reliable results for every analysis.",
+          "Enables simultaneous measurement of arterial blood gases, electrolytes, metabolites, hematocrit, and co-oximetry, providing a comprehensive assessment of the patient's status.",
+          "Uses GEM PAK® cartridges that integrate reagents, sensors, and calibration solutions into a single consumable, reducing maintenance and downtime.",
+          "Features LIS/HIS connectivity and intelligent data management for efficient integration with laboratory and hospital IT infrastructure."
+        ]
+      }
+    },
+    {
       "id": "fluorecare",
-      "category": "especializado",
+      "category": "gasesarteriales",
       "brand": "Microprofit Biotech",
       "image": "assets/img/products/inmunofluorescencia-fluorecare.png",
       "es": {
@@ -326,7 +352,7 @@
     },
     {
       "id": "ecl-8000",
-      "category": "especializado",
+      "category": "gasesarteriales",
       "brand": "Lifotronic",
       "image": "assets/img/products/ecl-8000.png",
       "es": {
@@ -352,7 +378,7 @@
     },
     {
       "id": "stat-fax-4200",
-      "category": "especializado",
+      "category": "gasesarteriales",
       "brand": "Awareness Technology",
       "image": "assets/img/products/fax-4200.png",
       "es": {
@@ -378,7 +404,7 @@
     },
     {
       "id": "acl-elite-pro",
-      "category": "especializado",
+      "category": "diagnostico",
       "brand": "IL",
       "image": "assets/img/products/acl-elite.png",
       "es": {
@@ -404,7 +430,7 @@
     },
     {
       "id": "diachek-c2",
-      "category": "especializado",
+      "category": "diagnostico",
       "brand": "Dialab",
       "image": "assets/img/products/diachek-c2.png",
       "es": {
