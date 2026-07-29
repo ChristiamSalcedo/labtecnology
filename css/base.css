@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Lab Technology C.A. — Design Tokens & Base
+   Lab Tecnology C.A. — Design Tokens & Base
    ========================================================================== */
 
 :root {
-  /* Color palette — derived from the Lab Technology mark (white / green / blue) */
+  /* Color palette — derived from the Lab Tecnology mark (white / green / blue) */
   --c-white: #ffffff;
   --c-paper: #f5faf6;
   --c-paper-deep: #eaf3ea;
@@ -26,9 +26,7 @@
   --grad-atom: linear-gradient(120deg, var(--c-green-500) 0%, var(--c-blue-600) 100%);
   --grad-atom-soft: linear-gradient(120deg, var(--c-green-100) 0%, var(--c-blue-100) 100%);
 
-  
-
-  /* Typography */
+  /* Typography System */
   --font-display: "Space Grotesk", "Inter", sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
@@ -87,13 +85,14 @@ html { scroll-behavior: smooth; }
   }
 }
 
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
 ul[class], ol[class] { list-style: none; margin: 0; padding: 0; }
 img, picture, svg { display: block; max-width: 100%; }
 input, button, textarea, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 
+/* Global Typography Application ------------------------------------------ */
 body {
   font-family: var(--font-body);
   background: var(--c-paper);
@@ -104,12 +103,20 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+/* Todos los encabezados heredan Space Grotesk */
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   color: var(--c-blue-900);
   line-height: 1.12;
   letter-spacing: -0.01em;
   font-weight: 600;
+}
+
+/* Clases de utilidad para IBM Plex Mono */
+.eyebrow,
+.num,
+.label-mono {
+  font-family: var(--font-mono);
 }
 
 ::selection { background: var(--c-green-400); color: var(--c-blue-900); }

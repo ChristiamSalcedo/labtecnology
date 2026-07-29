@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Catalog page
+   Catalog Page — Lab Tecnology C.A.
    ========================================================================== */
 
 .cat-hero {
-  /* SOLUCIÓN AL SOLAPAMIENTO: Aumentamos el padding-top para empujar el texto fuera del header fixed */
+  /* Solución al solapamiento: padding para despejar el header fixed */
   padding-top: clamp(8rem, 14vw, 10.5rem);
   padding-bottom: var(--sp-7);
   background: var(--c-blue-900);
@@ -20,31 +20,29 @@
   position: relative; z-index: 1; 
 }
 .cat-hero h1 { 
-  font-family: 'Forum', serif;
-  font-weight: 400;
   color: var(--c-white); 
   font-size: clamp(2rem, 4.4vw, var(--fs-3xl)); 
   max-width: 20ch; 
+  /* Hereda automáticamente Space Grotesk desde base.css */
 }
-.cat-hero p { margin-top: var(--sp-4); color: rgba(255,255,255,0.75); max-width: 60ch; font-size: var(--fs-md); }
+.cat-hero p { 
+  margin-top: var(--sp-4); 
+  color: rgba(255,255,255,0.75); 
+  max-width: 60ch; 
+  font-size: var(--fs-md); 
+}
 
-
-/* ==========================================================================
-   Nueva Estructura de Catálogo (Layout Lateral)
-   ========================================================================== */
-
+/* Layout Lateral ----------------------------------------------------------- */
 @media (min-width: 992px) {
   .cat-layout {
     display: grid;
     grid-template-columns: 215px 1fr; 
     gap: var(--sp-7);
-    align-items: start; /* Sigue alineando los bloques arriba */
-    /* Devolvemos la separación con el fondo azul usando padding superior */
+    align-items: start;
     padding-top: var(--sp-8) !important; 
     padding-bottom: var(--sp-8);
   }
 
-  /* Barra lateral sticky */
   .cat-sidebar {
     position: sticky;
     top: 100px; 
@@ -53,7 +51,6 @@
     padding-top: 0 !important;
   }
   
-  /* Eliminamos el margen superior de la columna de productos para que empiece exactamente a la par de la barra lateral */
   .cat-content,
   #catalog-sections {
     margin-top: 0 !important;
@@ -69,7 +66,6 @@
     padding-top: 0 !important;
   }
 }
-
 
 /* Filter bar --------------------------------------------------------------- */
 .filter-bar {
@@ -107,7 +103,7 @@
     flex-direction: column; 
     align-items: stretch;    
     overflow-x: visible;     
-    gap: 6px; /* Más compacto */
+    gap: 6px;
   }
 }
 
@@ -128,10 +124,10 @@
   .filter-chip {
     text-align: left; 
     width: 100%;
-    border-radius: 6px; /* Bordes más limpios y profesionales */
-    padding: 0.55em 0.85em; /* Reducido para que se vea más compacto */
-    font-size: 0.72rem; /* Tipografía más pequeña para que no abarque tanto */
-    white-space: normal; /* Permite saltos de línea elegantes si el texto es largo */
+    border-radius: 6px;
+    padding: 0.55em 0.85em;
+    font-size: 0.72rem;
+    white-space: normal;
     line-height: 1.3;
   }
 }
@@ -157,9 +153,7 @@
 }
 
 @media (min-width: 992px) {
-  .filter-bar__count {
-    display: none; 
-  }
+  .filter-bar__count { display: none; }
 }
 
 /* Catalog sections ---------------------------------------------------------- */
@@ -185,22 +179,17 @@
 .catalog-section__head h2 { font-size: var(--fs-xl); }
 .catalog-section__head p { color: var(--c-ink-soft); font-size: var(--fs-sm); margin-top: 4px; }
 
-/* Product grid: 3 columns (three rows of products per viewport) ------------ */
+/* Product Grid ------------------------------------------------------------- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-5);
 }
 @media (max-width: 1200px) { 
-  .product-grid { 
-    grid-template-columns: repeat(2, 1fr); 
-  } 
+  .product-grid { grid-template-columns: repeat(2, 1fr); } 
 }
-
 @media (max-width: 620px) { 
-  .product-grid { 
-    grid-template-columns: 1fr; 
-  } 
+  .product-grid { grid-template-columns: 1fr; } 
 }
 
 .product-card {
@@ -232,8 +221,8 @@
 }
 .product-card h3 {
   font-size: var(--fs-md);
-  font-family: var(--font-body);
-  font-weight: 700;
+  font-family: var(--font-display); /* Ahora los títulos de productos usan Space Grotesk */
+  font-weight: 600;
   color: var(--c-blue-900);
   text-align: center;
   margin-bottom: var(--sp-4);
@@ -281,18 +270,18 @@
 .product-card__img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important; /* Mantiene la escala real del equipo clínico */
-  padding: var(--sp-4); /* Genera espacio interno para que el producto respire */
+  object-fit: contain !important;
+  padding: var(--sp-4);
   background: transparent !important;
-  mix-blend-mode: multiply; /* Absorbe el fondo blanco de tus fotos JPG/PNG */
+  mix-blend-mode: multiply;
   transition: transform var(--dur-med) var(--ease-out);
 }
 
 .product-card:hover .product-card__img {
-  transform: scale(1.05); /* Zoom elegante interactivo */
+  transform: scale(1.05);
 }
 
-/* Quote modal ---------------------------------------------------------- */
+/* Quote Modal ---------------------------------------------------------- */
 .modal {
   position: fixed;
   inset: 0;
@@ -314,7 +303,7 @@
   background: var(--c-white);
   border-radius: var(--radius-lg);
   padding: var(--sp-7);
-  padding-top: var(--sp-7) !important; /* Mantiene el espaciado superior equilibrado por la falta de la gota */
+  padding-top: var(--sp-7) !important;
   max-width: 440px;
   width: 100%;
   box-shadow: var(--shadow-lg);
@@ -336,8 +325,6 @@
 }
 .modal__close svg { width: 15px; height: 15px; pointer-events: none; }
 
-/* .modal__icon ha sido eliminado por optimización ya que no se usa */
-
 .modal__brand {
   display: inline-block;
   font-family: var(--font-mono);
@@ -353,7 +340,6 @@
   margin-bottom: var(--sp-3); 
 }
 
-/* Modificado: Aplica estilos a la descripción y hereda propiedades del párrafo base */
 .modal__panel p, [data-modal-desc] { 
   color: var(--c-ink-soft); 
   font-size: var(--fs-sm); 
@@ -363,16 +349,15 @@
   text-justify: inter-word;
 }
 
-/* Estilos para la lista de características dentro del modal */
 .modal__features {
   margin: var(--sp-4) 0;
   padding: 0;
   list-style: none;
-  text-align: left; /* Alineación limpia para lectura de listas */
+  text-align: left;
 }
 
 .modal__features li {
-  font-size: clamp(0.8rem, 2.5vw, 0.88rem); /* Tamaño sutilmente menor para no saturar */
+  font-size: clamp(0.8rem, 2.5vw, 0.88rem);
   line-height: 1.4;
   color: var(--c-ink-soft);
   margin-bottom: var(--sp-2);

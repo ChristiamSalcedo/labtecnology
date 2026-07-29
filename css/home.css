@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Hero
+   Hero & Layout Sections — Lab Tecnology C.A.
    ========================================================================== */
 
 .hero {
@@ -54,18 +54,16 @@
   align-items: center;
 }
 @media (max-width: 980px) {
-  .hero__grid {
-  grid-template-columns: 1fr; }
+  .hero__grid { grid-template-columns: 1fr; }
 }
 
 .hero__eyebrow { margin-bottom: var(--sp-5); }
 
 .hero h1 {
-  font-family: 'Forum', serif;
-  font-weight: 400;
-  font-size: clamp(2.3rem, 5.4vw, var(--fs-4xl));
-  max-width: 30ch;
-  line-height: 1.25; 
+  font-weight: 600;
+  font-size: clamp(2rem, 3.2vw, 2.75rem); 
+  max-width: 42ch; 
+  line-height: 1.2; 
   color: var(--c-blue-900);
 }
 .hero h1 .accent {
@@ -79,8 +77,8 @@
   margin-top: var(--sp-5);
   font-size: var(--fs-md);
   color: var(--c-ink-soft);
-  max-width: 46ch;
-  text-align: justify;
+  max-width: 58ch; 
+  text-align: justify; 
 }
 
 .hero__actions {
@@ -100,7 +98,7 @@
   .hero__stats { grid-template-columns: repeat(2, auto); }
 }
 .hero__stat .num {
-  font-family: var(--font-display);
+  font-family: var(--font-mono); /* Números alineados a la fuente monoespaciada */
   font-size: var(--fs-xl);
   color: var(--c-blue-900);
   font-weight: 700;
@@ -116,7 +114,7 @@
   color: var(--c-ink-soft);
 }
 
-/* Hero visual: instrument readout panel -------------------------------- */
+/* Hero visual: Instrument readout panel -------------------------------- */
 .hero__panel {
   position: relative;
   background: var(--c-blue-900);
@@ -169,9 +167,7 @@
   overflow: hidden;
   margin-bottom: var(--sp-5);
 }
-.hero__scan svg { 
-  width: 100%; height: 100%; 
-}
+.hero__scan svg { width: 100%; height: 100%; }
 
 .hero__scan-line {
   position: absolute;
@@ -234,22 +230,24 @@
   opacity: 0.96;
   transition: transform var(--dur-med) var(--ease-out);
 }
-.hero__brandstrip:hover { 
-  transform: scale(1.015); 
-}
+.hero__brandstrip:hover { transform: scale(1.015); }
 
 .hero__visual-space {
   min-height: 1px;
   width: 100%;
 }
-
 @media (max-width: 980px) {
-  .hero__visual-space {
-    display: none;
-  }
+  .hero__visual-space { display: none; }
 }
 
 /* About / Nosotros ------------------------------------------------------ */
+.about h2 {
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem); /* O la variable var(--fs-3xl) que usas en los otros h2 */
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--c-blue-900);
+}
+
 .about {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -275,7 +273,7 @@
 }
 
 .about__image {
-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover; 
   display: block;
@@ -286,7 +284,8 @@ width: 100%;
 }
 @keyframes float-y {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); } }
+  50% { transform: translateY(-6px); } 
+}
 @media (prefers-reduced-motion: reduce) { 
   .about__visual .about__image { animation: none; } 
 }
@@ -309,11 +308,9 @@ width: 100%;
   border: 1px solid rgba(76,127,31,0.18);
 }
 
-.about__body p + p {
-   margin-top: var(--sp-4); 
-  }
+.about__body p + p { margin-top: var(--sp-4); }
 
-  .about__body p { 
+.about__body p { 
   color: var(--c-ink-soft); 
   font-size: var(--fs-md); 
   text-align: justify; 
@@ -334,34 +331,51 @@ width: 100%;
   color: var(--c-blue-800);
 }
 
-/* Mission / Vision / Values - Centro Absoluto ------------------------- */
+/* Mission / Vision / Values -------------------------------------------- */
+/* 1. Estilos por defecto (Pensado para pantallas táctiles / Móviles) */
+#mision .section-head {
+  width: 100%;
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* Centra flex items */
+  text-align: center;
+}
+
+#mision .section-head h2 {
+  max-width: 100% !important;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem); /* Bajamos un pelo la escala para asegurar que entre sin empujar */
+  white-space: nowrap;
+  margin-inline: auto !important;           /* Centra los márgenes laterales (auto a ambos lados) */
+  text-align: center;
+}
+
+/* En celulares volvemos a permitir el salto de línea para evitar overflow */
+@media (max-width: 768px) {
+  #mision .section-head h2 {
+    white-space: normal;
+  }
+}
+
 .expanding-pillars {
   display: flex;
+  flex-direction: column; /* En móvil se apilan en vertical */
   gap: var(--sp-4);
   width: 100%;
-  height: 450px; 
+  height: auto; /* Altura flexible */
   margin-top: var(--sp-6);
 }
 
 .expanding-pillar {
   position: relative;
-  flex: 1;
+  width: 100%;
   background-size: cover;
   background-position: center;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
   padding: var(--sp-6);
-  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.expanding-pillar:hover {
-  flex: 2.8; 
-  box-shadow: var(--shadow-lg);
 }
 
 .expanding-pillar__content {
@@ -373,80 +387,93 @@ width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .expanding-pillar h3 {
-  font-size: var(--fs-xl); 
+  font-size: var(--fs-xl);
   color: var(--c-white);
   margin: 0;
   font-weight: 700;
-  letter-spacing: 0.1em; 
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
+/* En móvil, el texto SIEMPRE está visible */
 .expanding-pillar__text-wrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  visibility: hidden;
-  transition: grid-template-rows 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  display: block;
+  opacity: 1;
+  visibility: visible;
   width: 100%;
 }
 
 .expanding-pillar__text-wrapper p,
 .expanding-pillar__text-wrapper .values-list {
-  overflow: hidden;
   margin: 0;
-  padding-top: var(--sp-4); 
+  padding-top: var(--sp-3);
   font-size: var(--fs-sm);
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   text-align: center;
 }
 
-.expanding-pillar:hover .expanding-pillar__text-wrapper {
-  grid-template-rows: 1fr;
-  opacity: 1;
-  visibility: visible;
+/* 2. Estilos para Escritorio / Computadoras (Dispositivos CON mouse) */
+@media (min-width: 861px) and (hover: hover) {
+  .expanding-pillars {
+    flex-direction: row; /* En PC vuelven a ser columnas lado a lado */
+    height: 450px;       /* Altura fija para el efecto de acordeón */
+  }
+
+  .expanding-pillar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .expanding-pillar:hover {
+    flex: 2.8;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* En PC ocultamos el texto por defecto para activar el HOVER */
+  .expanding-pillar__text-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+    transition: grid-template-rows 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  .expanding-pillar__text-wrapper p,
+  .expanding-pillar__text-wrapper .values-list {
+    overflow: hidden;
+    padding-top: var(--sp-4);
+  }
+
+  /* Revelar texto al pasar el mouse en PC */
+  .expanding-pillar:hover .expanding-pillar__text-wrapper {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-.expanding-pillar .values-list { 
-  display: flex; 
-  flex-direction: column; 
-  gap: var(--sp-3); 
-  list-style: none;
-  padding: 0;
-}
-
-.expanding-pillar .values-list li {
-  display: block;
-  color: rgba(255, 255, 255, 0.9);
+/* Brands Section — Marquee ---------------------------------------------- */
+#marcas .section-head {
+  max-width: 900px !important;              /* Amplía el espacio total del encabezado */
+  margin-inline: auto !important;
   text-align: center;
 }
 
-.expanding-pillar .values-list li::before {
-  display: none !important;
+#marcas .section-head h2 {
+  max-width: 100% !important;               /* Usa todo el espacio que le da el padre */
+  font-size: clamp(1.6rem, 2.7vw, 2.1rem);  /* Tamaño óptimo para no forzar quiebres */
+  margin-inline: auto !important;
+  text-align: center;
 }
 
-@media (max-width: 860px) {
-  .expanding-pillars {
-    flex-direction: column;
-    height: auto;
-  }
-  .expanding-pillar {
-    flex: none;
-    width: 100%;
-    height: 140px; 
-  }
-  .expanding-pillar:hover {
-    flex: none;
-    height: auto;
-    padding-block: var(--sp-8);
-  }
-}
-
-/* Brands section - Infinite Marquee Definitivo --------------------------- */
 .brands-marquee-wrapper {
   padding: var(--sp-4) 0;
   width: 100% !important;
@@ -504,25 +531,17 @@ width: 100%;
   box-shadow: none !important;
 }
 
-.marquee-track img:hover {
-  transform: scale(1.06); 
-}
+.marquee-track img:hover { transform: scale(1.06); }
 
 @media (max-width: 760px) {
-  .marquee-track img {
-    height: 50px !important; 
-  }
+  .marquee-track img { height: 50px !important; }
   .marquee-container::before,
-  .marquee-container::after {
-    width: 60px;
-  }
+  .marquee-container::after { width: 60px; }
 }
 
-#catalogo {
-  padding-top: var(--sp-4) !important; 
-}
+#catalogo { padding-top: var(--sp-4) !important; }
 
-/* Categories teaser (home) --------------------------------------------- */
+/* Categories Teaser (Home) --------------------------------------------- */
 #catalogo .section-head {
   max-width: 100% !important; 
   width: 100% !important;
@@ -591,9 +610,7 @@ width: 100%;
   transition: transform 0.5s ease;
 }
 
-.cat-card:hover .cat-card__img-wrapper img {
-  transform: scale(1.05); 
-}
+.cat-card:hover .cat-card__img-wrapper img { transform: scale(1.05); }
 
 .cat-card__content {
   padding: var(--sp-5); 
@@ -634,11 +651,9 @@ width: 100%;
   height: 14px; 
   transition: transform var(--dur-fast) var(--ease-out); 
 }
-.cat-card:hover .cat-card__link svg { 
-  transform: translateX(4px); 
-}
+.cat-card:hover .cat-card__link svg { transform: translateX(4px); }
 
-/* CTA banner -------------------------------------------------------------- */
+/* CTA Banner -------------------------------------------------------------- */
 .cta-banner {
   position: relative;
   border-radius: var(--radius-lg);
@@ -661,9 +676,9 @@ width: 100%;
   margin-inline: auto; 
 }
 .cta-banner h2 {
-   color: var(--c-white); 
-   font-size: clamp(1.6rem, 3vw, var(--fs-2xl)); 
-  }
+  color: var(--c-white); 
+  font-size: clamp(1.6rem, 3vw, var(--fs-2xl)); 
+}
 .cta-banner p { 
   margin-top: var(--sp-4); 
   color: rgba(255,255,255,0.78); 
@@ -675,7 +690,7 @@ width: 100%;
   flex-wrap: wrap; 
 }
 
-/* Contact section --------------------------------------------------------- */
+/* Contact Section --------------------------------------------------------- */
 .contact-grid h2 {
   font-size: clamp(1.6rem, 3.5vw, 2.3rem) !important;
   color: var(--c-blue-900);
@@ -726,10 +741,7 @@ width: 100%;
   justify-content: center;
   color: var(--c-white);
 }
-.contact-item__icon svg { 
-  width: 20px; 
-  height: 20px; 
-}
+.contact-item__icon svg { width: 20px; height: 20px; }
 .contact-item strong { 
   display: block; 
   font-size: var(--fs-sm); 

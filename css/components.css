@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Components
+   Components — Lab Tecnology C.A.
    ========================================================================== */
 
 /* Buttons ------------------------------------------------------------ */
@@ -9,7 +9,7 @@
   gap: var(--sp-2);
   padding: 0.95em 1.9em;
   border-radius: var(--radius-pill);
-  font-family: var(--font-display);
+  font-family: var(--font-body); 
   font-weight: 600;
   font-size: var(--fs-sm);
   letter-spacing: 0.01em;
@@ -56,7 +56,6 @@
   display: inline-flex;
   align-items: center;
   gap: 0.55em;
-  font-family: var(--font-mono);
   font-size: var(--fs-2xs);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -156,7 +155,6 @@
   color: var(--c-green-400); 
 }
 
-
 .brand {
   display: inline-flex;
   align-items: center;
@@ -165,11 +163,9 @@
   z-index: 1;
 }
 .brand img { 
-  height: 82px; /* Subimos de 46px a 62px */
+  height: 82px; 
   width: auto; 
   transition: height var(--dur-med) var(--ease-out); 
-  
-  /* Truco UI: Evita el difuminado de píxeles en pantallas HD */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -196,9 +192,9 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Manda las acciones a la derecha */
+  justify-content: flex-end; 
   flex-grow: 1;
-  position: static; /* NUEVO: Rompe el contenedor para permitir el centro absoluto real */
+  position: static; 
 }
 .nav__list {
   display: flex;
@@ -209,12 +205,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  /* NUEVO: Posicionamiento absoluto respecto al .container total */
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* Lo mueve de vuelta exactamente la mitad de su propio ancho */
+  transform: translate(-50%, -50%); 
   z-index: 10;
 }
 .nav__list a {
@@ -239,9 +233,10 @@
   display: flex;
   align-items: center;
   gap: var(--sp-3);
-  margin-left: auto; /* Se asegura de pegarse a la derecha */
+  margin-left: auto; 
 }
 
+/* Selector de idioma */
 .lang-switch {
   display: inline-flex;
   border: 1.5px solid rgba(10,47,77,0.16);
@@ -267,35 +262,20 @@
   color: var(--c-white);
 }
 
-
 .site-header--on-dark .lang-switch {
-  /* Borde blanco suave para resaltar sobre el fondo oscuro original */
   border-color: rgba(255, 255, 255, 0.25); 
 }
 
 .site-header--on-dark .lang-switch button {
-  /* Letras en blanco suave para el idioma inactivo */
   color: rgba(255, 255, 255, 0.55); 
 }
 
-
-/* ==========================================================================
-   AJUSTE DE SCROLL: Cuando el header oscuro pasa a ser claro al bajar
-   ========================================================================== */
 .site-header--on-dark.is-scrolled .lang-switch {
-  /* Devolvemos el borde gris oscuro sutil para que contraste sobre el fondo blanco */
   border-color: rgba(10, 47, 77, 0.16);
 }
 
 .site-header--on-dark.is-scrolled .lang-switch button {
-  /* Devolvemos el texto oscuro de tu switch original para el idioma inactivo */
   color: var(--c-ink-soft);
-}
-
-/* El botón activo mantendrá siempre su fondo degradado atómico en cualquier estado */
-.lang-switch button[aria-pressed="true"] {
-  background: var(--grad-atom);
-  color: var(--c-white);
 }
 
 .nav-toggle {
@@ -323,7 +303,6 @@
     transition: transform var(--dur-med) var(--ease-out);
   }
   
-  /* REINICIO EN MÓVIL: Quitamos el centro absoluto para que la lista fluya verticalmente */
   .nav__list { 
     position: static !important;
     transform: none !important;
@@ -341,11 +320,10 @@
   .lang-switch button { color: rgba(255,255,255,0.75); }
 }
 
-/* Redes Sociales del Footer - Iconos Blancos, Planos y Más Grandes */
 .social-row { 
   display: flex; 
   align-items: center; 
-  gap: var(--sp-5); /* Aumentamos el espacio entre ellos para que no se encimen */
+  gap: var(--sp-5); 
   margin-top: 1.25rem;
 }
 
@@ -362,22 +340,16 @@
   transition: none !important;
 }
 
-/* AGRANDAMOS LOS ICONOS: Subimos de 18px a 24px para que se vean nítidos y perfectos */
 .social-row svg { 
   width: 24px !important; 
   height: 24px !important; 
   stroke: #ffffff !important; 
-  stroke-width: 1.8 !important; /* Grosor ideal para este tamaño */
+  stroke-width: 1.8 !important; 
 }
 
-/* Aseguramos consistencia en trazos y rellenos */
-.social-row svg path {
-  stroke: #ffffff !important;
-}
+.social-row svg path { stroke: #ffffff !important; }
 .social-row svg[fill="currentColor"],
-.social-row svg [fill] {
-  fill: #ffffff !important;
-}
+.social-row svg [fill] { fill: #ffffff !important; }
 
 /* Cards ---------------------------------------------------------------- */
 .card {
@@ -417,12 +389,10 @@
 }
 @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr; } }
 .footer-brand img { 
-  height: 70px; /* Un toque más grande para que gane presencia visual */
-  width: auto !important; /* ¡ESTO LIBERA EL ANCHO PARA QUE NO SE ESTIRE NI SE DEFORME! */
+  height: 70px; 
+  width: auto !important; 
   margin-bottom: var(--sp-4); 
   display: block;
-  
-  /* Truco UI: Mantiene los bordes nítidos de la imagen en pantallas HD */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -439,34 +409,38 @@
   font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-family: var(--font-mono);
   margin-bottom: var(--sp-4);
   font-weight: 600;
 }
 .footer-col ul { 
   display: flex; 
   flex-direction: column; 
-  gap: 6px !important; /* Cambiamos var(--sp-3) por 0.5rem para compactarlo */
+  gap: 6px !important; 
   font-size: var(--fs-sm); 
-  padding: 0; /* Aseguramos que no tenga rellenos raros */
-  margin: 0;  /* Aseguramos que no tenga márgenes raros */
+  padding: 0; 
+  margin: 0;  
+}
+.footer-col ul li a {
+  display: inline-block;
+  padding-block: 0 !important;
+  margin-block: 0 !important;
+  line-height: 1.2;
 }
 .footer-col a:hover { color: var(--c-green-400); }
+
 .footer-bottom {
   margin-top: var(--sp-8);
   padding-top: var(--sp-5);
   border-top: 1px solid rgba(255,255,255,0.12);
   display: flex;
-  justify-content: center; /* ¡ESTO CENTRA EL TEXTO HORIZONTALMENTE AL MEDIO! */
-  text-align: center; /* Asegura el centrado si el texto llega a ocupar dos líneas en celulares */
+  justify-content: center; 
+  text-align: center; 
   flex-wrap: wrap;
   gap: var(--sp-3);
   font-size: var(--fs-2xs);
-  font-family: var(--font-mono);
   color: rgba(255,255,255,0.5);
+  /* Hereda --font-mono mediante la clase en base.css */
 }
-
-
 
 /* Back to top ---------------------------------------------------------- */
 .back-to-top {

@@ -1,5 +1,5 @@
 /**
- * Lab Technology C.A. — Site interactions
+ * Lab Tecnology C.A. — Site interactions
  * Clean, dependency-free progressive enhancement.
  */
 (function () {

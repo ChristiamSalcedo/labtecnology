@@ -1,6 +1,6 @@
-# Lab Technology C.A. — Sitio Web Corporativo
+# Lab Tecnology C.A. — Sitio Web Corporativo
 
-Sitio web bilingüe (ES/EN) para **Lab Technology C.A.**, distribuidor de reactivos, equipos
+Sitio web bilingüe (ES/EN) para **Lab Tecnology C.A.**, distribuidor de reactivos, equipos
 de laboratorio, equipos médicos y mobiliario clínico en Venezuela.
 
 ## 🧱 Arquitectura de carpetas
@@ -34,7 +34,7 @@ site/
 ## 🎨 Sistema de diseño
 
 - **Paleta de colores**: blanco/paper, verdes y azules extraídos directamente del logotipo
-  de Lab Technology (ver variables `--c-green-*`, `--c-blue-*` en `base.css`). No se usa
+  de Lab Tecnology (ver variables `--c-green-*`, `--c-blue-*` en `base.css`). No se usa
   ningún color fuera de esta paleta.
 - **Tipografía**: Space Grotesk (títulos), Inter (texto), IBM Plex Mono (datos técnicos /
   etiquetas), cargadas vía Google Fonts.
@@ -87,7 +87,7 @@ python3 -m http.server 8080
 El sitio es 100% estático (HTML/CSS/JS, sin build step). Puede subirse directamente a
 cualquier hosting estático (Netlify, Vercel, GitHub Pages, cPanel, etc.). Antes de publicar:
 
-1. Reemplazar el dominio de ejemplo `https://www.labtechnology.com.ve/` en:
+1. Reemplazar el dominio de ejemplo `https://www.labtecnology.com.ve/` en:
    - `index.html` y `catalogo.html` (`<link rel="canonical">`, Open Graph, JSON-LD)
    - `robots.txt` y `sitemap.xml`
 2. Actualizar el número de WhatsApp/teléfono si cambia.

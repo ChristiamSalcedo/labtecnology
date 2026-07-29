@@ -1,5 +1,5 @@
 /**
- * Lab Technology C.A. — Catalog engine
+ * Lab Tecnology C.A. — Catalog engine
  * Fetches /data/products.json and renders category sections, product cards,
  * filter chips and a lightweight quote modal. Framework-free.
  */
@@ -207,9 +207,9 @@
     if (whatsappBtn) {
       var messageText = "";
       if (currentLang === "en") {
-        messageText = "Hello Lab Technology, I am interested in requesting a quote for: *" + content.name + "*.";
+        messageText = "Hello Lab Tecnology, I am interested in requesting a quote for: *" + content.name + "*.";
       } else {
-        messageText = "Hola Lab Technology, me interesa solicitar una cotización para el equipo: *" + content.name + "*.";
+        messageText = "Hola Lab Tecnology, me interesa solicitar una cotización para el equipo: *" + content.name + "*.";
       }
       
       var encodedMessage = encodeURIComponent(messageText);
