@@ -113,11 +113,27 @@
       "contact.form.message.placeholder": "Cuéntanos qué equipo, reactivo o insumo necesitas…",
       "contact.form.submit": "Enviar mensaje",
 
+      /* FAQ Section */
+      "faq.eyebrow": "Resolvemos tus dudas",
+      "faq.title": "Preguntas frecuentes sobre nuestros equipos e insumos.",
+      "faq.subtitle": "Todo lo que necesitas saber sobre nuestra distribución, marcas y servicio técnico en Venezuela.",
+      "faq.q1": "¿Dónde distribuyen los equipos de laboratorio clínico?",
+      "faq.a1": "Lab Tecnology C.A. suministra equipos de laboratorio clínico en Caracas y en toda Venezuela, con entrega, instalación y servicio técnico incluido.",
+      "faq.q2": "¿Qué marcas de insumos médicos distribuyen en Venezuela?",
+      "faq.a2": "Somos distribuidor de marcas como Mindray, Beckman Coulter, Werfen, Abbott y Biobase, todas respaldadas por ensayos clínicos y certificaciones internacionales de calidad, disponibles a través de Lab Tecnology C.A. en Venezuela.",
+      "faq.q3": "¿Ofrecen servicio técnico de equipos de laboratorio en Venezuela?",
+      "faq.a3": "Ofrecemos servicio técnico de equipos de laboratorio en Venezuela, incluyendo instalación, mantenimiento preventivo y correctivo para todas las marcas que comercializamos.",
+      "faq.q4": "¿Venden equipos médicos hospitalarios en Venezuela?",
+      "faq.a4": "Lab Tecnology C.A. comercializa equipos médicos hospitalarios en Venezuela, incluyendo analizadores de hemostasia y equipos de diagnóstico y monitoreo para clínicas y hospitales.",
+      "faq.q5": "¿Venden mobiliario clínico para laboratorio?",
+      "faq.a5": "Ofrecemos mobiliario clínico para laboratorio de alta calidad, diseñado para equipar de forma completa e integral las instalaciones de tu institución de salud.",
+
       /* Footer */
       "footer.tagline": "Insumos y equipos de alta calidad para laboratorios clínicos, con servicio técnico especializado en toda Venezuela.",
       "footer.nav.title": "Navegación",
       "footer.cat.title": "Categorías",
       "footer.contact.title": "Contacto",
+      "nav.faq": "Preguntas frecuentes",
       "footer.rights": "© 2026 Lab Tecnology C.A. — RIF: J504074810. Todos los derechos reservados.",
       "footer.credit": "Diseñado con precisión clínica.",
 
@@ -239,11 +255,27 @@
       "contact.form.message.placeholder": "Tell us which equipment, reagent or supply you need…",
       "contact.form.submit": "Send message",
 
+      /* FAQ Section English */
+      "faq.eyebrow": "Frequently Asked Questions",
+      "faq.title": "Frequently asked questions about our equipment and supplies.",
+      "faq.subtitle": "Everything you need to know about our distribution, brands, and technical service in Venezuela.",
+      "faq.q1": "Where do you distribute clinical laboratory equipment?",
+      "faq.a1": "Lab Tecnology C.A. supplies clinical laboratory equipment in Caracas and throughout Venezuela, including delivery, installation, and technical service.",
+      "faq.q2": "What brands of medical supplies do you distribute in Venezuela?",
+      "faq.a2": "We are distributors of brands such as Mindray, Beckman Coulter, Werfen, Abbott, and Biobase, all backed by clinical trials and international quality certifications, available through Lab Tecnology C.A. in Venezuela.",
+      "faq.q3": "Do you offer technical service for laboratory equipment in Venezuela?",
+      "faq.a3": "We offer technical service for laboratory equipment in Venezuela, including installation, preventive maintenance, and corrective repairs for all brands we commercialize.",
+      "faq.q4": "Do you sell hospital medical equipment in Venezuela?",
+      "faq.a4": "Lab Tecnology C.A. sells hospital medical devices in Venezuela, including hemostasis analyzers as well as diagnostic and monitoring equipment for clinics and hospitals.",
+      "faq.q5": "Do you sell clinical laboratory furniture?",
+      "faq.a5": "We offer high-quality clinical laboratory furniture designed to fully equip your healthcare institution's facilities.",
+
       /* Footer English */
       "footer.tagline": "High-quality supplies and equipment for clinical laboratories, with specialized technical service across Venezuela.",
       "footer.nav.title": "Navigation",
       "footer.cat.title": "Categories",
       "footer.contact.title": "Contact",
+      "nav.faq": "FAQ",
       "footer.rights": "© 2026 Lab Tecnology C.A. — RIF: J504074810. All rights reserved.",
       "footer.credit": "Designed with clinical precision.",
 

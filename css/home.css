@@ -795,3 +795,89 @@
   font-size: var(--fs-xs); 
   color: var(--c-ink-soft); 
 }
+
+/* ==========================================================================
+   FAQ Section Accordion — Lab Tecnology C.A.
+   ========================================================================== */
+
+.faq-accordion {
+  max-width: 820px;
+  margin-inline: auto;
+  margin-top: var(--sp-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.faq-item {
+  background: var(--c-white, #ffffff);
+  border: 1px solid rgba(10, 47, 77, 0.08);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--dur-med) var(--ease-out), box-shadow var(--dur-med) var(--ease-out);
+}
+
+.faq-item:hover {
+  border-color: rgba(126, 193, 58, 0.4); /* Resaltado verde al hacer hover */
+}
+
+.faq-item[open] {
+  border-color: var(--c-blue-900, #0a2f4d);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item__question {
+  padding: var(--sp-5) var(--sp-6);
+  font-family: var(--font-heading, "Space Grotesk", sans-serif);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  color: var(--c-blue-900, #0a2f4d);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  list-style: none; /* Elimina la flecha nativa de details */
+  user-select: none;
+}
+
+.faq-item__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: var(--c-blue-900, #0a2f4d);
+  transition: transform var(--dur-med) var(--ease-out), stroke var(--dur-med) var(--ease-out);
+}
+
+.faq-item[open] .faq-item__icon {
+  transform: rotate(90deg);
+  stroke: var(--c-green-500, #7ec13a); /* Cambia a verde cuando está abierto */
+}
+
+.faq-item__answer {
+  padding: 0 var(--sp-6) var(--sp-6) var(--sp-6);
+  color: var(--c-ink-soft, #4a5568);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  border-top: 1px solid transparent;
+}
+
+.faq-item[open] .faq-item__answer {
+  border-top-color: rgba(10, 47, 77, 0.05);
+  animation: faq-fade-in 0.3s ease-out;
+}
+
+@keyframes faq-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -3,33 +3,44 @@
    ========================================================================== */
 
 .cat-hero {
-  /* Solución al solapamiento: padding para despejar el header fixed */
+  /* Padding para despejar el header fixed */
   padding-top: clamp(8rem, 14vw, 10.5rem);
   padding-bottom: var(--sp-7);
   background: var(--c-blue-900);
   color: var(--c-white);
   position: relative;
   overflow: hidden;
+  text-align: center; /* Centra el contenido en el hero */
 }
+
 .cat-hero::before {
   content: "";
   position: absolute; inset: 0;
   background: radial-gradient(circle at 88% 0%, rgba(126,193,58,0.24), transparent 55%);
 }
+
 .cat-hero .container { 
-  position: relative; z-index: 1; 
+  position: relative; 
+  z-index: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los bloques al centro */
 }
+
 .cat-hero h1 { 
   color: var(--c-white); 
-  font-size: clamp(2rem, 4.4vw, var(--fs-3xl)); 
-  max-width: 20ch; 
-  /* Hereda automáticamente Space Grotesk desde base.css */
+  font-size: clamp(2rem, 3.8vw, 2.75rem); 
+  max-width: 38ch; /* Da el espacio suficiente para exactamente 2 líneas */
+  margin-inline: auto;
+  line-height: 1.2;
 }
+
 .cat-hero p { 
   margin-top: var(--sp-4); 
   color: rgba(255,255,255,0.75); 
-  max-width: 60ch; 
+  max-width: 68ch; /* Alineado armónicamente con el margen del título */
   font-size: var(--fs-md); 
+  margin-inline: auto;
 }
 
 /* Layout Lateral ----------------------------------------------------------- */
