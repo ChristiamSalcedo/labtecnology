@@ -94,6 +94,49 @@
     countEls.forEach(function (el) { countIO.observe(el); });
   }
 
+  /* Web3Forms Contact Form Handler -------------------------------------- */
+  var contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn ? submitBtn.textContent : "Enviar mensaje";
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
+      }
+
+      var formData = new FormData(contactForm);
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          if (data.success) {
+            alert("¡Mensaje enviado con éxito! Nos pondremos en contacto contigo a la brevedad.");
+            contactForm.reset();
+          } else {
+            alert("Hubo un problema al enviar el formulario. Por favor inténtalo de nuevo.");
+          }
+        })
+        .catch(function () {
+          alert("Error de conexión. Verifica tu conexión a internet e inténtalo nuevamente.");
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+          }
+        });
+    });
+  }
+
   /* Back to top ------------------------------------------------------------ */
   var backToTop = document.querySelector(".back-to-top");
   function toggleBackToTop() {
@@ -106,13 +149,13 @@
     });
   }
 
-
   /* Current year in footer -------------------------------------------------- */
   document.querySelectorAll("[data-current-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
 
-    var track = document.getElementById("marqueeTrack");
+  /* Marquee track animation ------------------------------------------------ */
+  var track = document.getElementById("marqueeTrack");
   if (track) {
     var originalItems = Array.from(track.children);
     

@@ -70,7 +70,7 @@
 
       /* Marcas */
       "brands.eyebrow": "Respaldo internacional",
-      "brands.title": "Distribuidor autorizado de Mindray, Beckman Coulter, Werfen y Abbott en Venezuela.",
+      "brands.title": "Comercialización y soporte tecnico de Biobase y Edan en Venezuela.",
       "brands.subtitle": "Trabajamos con fabricantes líderes a nivel mundial que avalan la calidad de cada equipo con ensayos clínicos y certificaciones internacionales.",
       "brands.note": "Ofrecemos a nuestros clientes insumos y equipos de alta calidad, eficiencia en la cadena de suministro, una plataforma logística robusta y flexible, y una excelente relación fabricante–distribuidor a precios competitivos.",
 
@@ -212,7 +212,7 @@
 
       /* Brands English */
       "brands.eyebrow": "International backing",
-      "brands.title": "Authorized distributor of Mindray, Beckman Coulter, Werfen, and Abbott in Venezuela.",
+      "brands.title": "Marketing and technical support for Biobase and Edan in Venezuela.",
       "brands.subtitle": "We work with leading global manufacturers that back the quality of every device with clinical trials and international certifications.",
       "brands.note": "We offer our clients high-quality supplies and equipment, efficient supply chain management, a robust and flexible logistics platform, and an excellent manufacturer–distributor relationship at competitive prices.",
 
