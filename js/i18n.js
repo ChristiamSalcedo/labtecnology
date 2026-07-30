@@ -29,7 +29,7 @@
 
       /* Hero */
       "hero.eyebrow": "Distribuidor autorizado de insumos médicos",
-      "hero.title.html": "Venta de equipos de laboratorio clinico, insumos <span class=\"accent\">y reactivos médicos en Venezuela</span>",
+      "hero.title.html": "Venta de equipos de laboratorio clínico , insumos <span class=\"accent\">y reactivos médicos en Venezuela</span>",
       "hero.lede": "Comercializamos equipos médicos y de laboratorio, material descartable y mobiliario clínico. Realizamos servicio técnico especializado, instalación y mantenimiento preventivo.",
       "hero.cta.catalog": "Ver catálogo completo",
       "hero.cta.contact": "Hablar con un asesor",
