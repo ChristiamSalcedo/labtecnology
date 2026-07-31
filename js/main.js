@@ -94,8 +94,35 @@
     countEls.forEach(function (el) { countIO.observe(el); });
   }
 
-  /* Web3Forms Contact Form Handler -------------------------------------- */
+  /* Web3Forms Contact Form Handler con Toast Notification ------------------- */
   var contactForm = document.getElementById("contact-form");
+
+  function showToast(message, type) {
+    // Eliminar toast previo si existe
+    var existingToast = document.querySelector(".form-toast");
+    if (existingToast) existingToast.remove();
+
+    // Crear el elemento toast
+    var toast = document.createElement("div");
+    toast.className = "form-toast form-toast--" + (type || "success");
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    // Animación de entrada
+    requestAnimationFrame(function () {
+      toast.classList.add("is-visible");
+    });
+
+    // Ocultar y remover después de 4 segundos
+    setTimeout(function () {
+      toast.classList.remove("is-visible");
+      toast.addEventListener("transitionend", function () {
+        if (toast.parentNode) toast.remove();
+      });
+    }, 4000);
+  }
+
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -119,14 +146,14 @@
         })
         .then(function (data) {
           if (data.success) {
-            alert("¡Mensaje enviado con éxito! Nos pondremos en contacto contigo a la brevedad.");
+            showToast("¡Mensaje enviado con éxito! Te contactaremos a la brevedad.", "success");
             contactForm.reset();
           } else {
-            alert("Hubo un problema al enviar el formulario. Por favor inténtalo de nuevo.");
+            showToast("Hubo un problema al enviar. Inténtalo nuevamente.", "error");
           }
         })
         .catch(function () {
-          alert("Error de conexión. Verifica tu conexión a internet e inténtalo nuevamente.");
+          showToast("Error de conexión. Revisa tu red e inténtalo de nuevo.", "error");
         })
         .finally(function () {
           if (submitBtn) {

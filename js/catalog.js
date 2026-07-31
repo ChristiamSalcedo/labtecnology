@@ -1,7 +1,6 @@
 /**
  * Lab Tecnology C.A. — Catalog engine
- * Fetches /data/products.json and renders category sections, product cards,
- * filter chips and a lightweight quote modal. Framework-free.
+ * Renderizado dinámico e internacionalización para products.json
  */
 (function () {
   "use strict";
@@ -13,9 +12,12 @@
   var elNoResults = document.querySelector("#no-results");
   var elModal = document.querySelector("#quote-modal");
 
+  // Obtiene el idioma actual del motor i18n
   function lang() {
     return (window.LT_I18N && window.LT_I18N.getLang()) || "es";
   }
+
+  // Traducción auxiliar mediante i18n
   function t(key) {
     return window.LT_I18N ? window.LT_I18N.t(key, lang()) : key;
   }
@@ -24,15 +26,16 @@
     return "#icon-" + categoryIcon;
   }
 
+  /* Barra lateral de filtros */
   function buildFilterBar(categories) {
+    if (!elFilterBar) return;
     var frag = document.createDocumentFragment();
 
     var allChip = document.createElement("button");
     allChip.className = "filter-chip";
     allChip.type = "button";
     allChip.setAttribute("data-filter", "all");
-    allChip.setAttribute("aria-pressed", "true");
-    allChip.setAttribute("data-i18n", "catalog.filter.all");
+    allChip.setAttribute("aria-pressed", state.activeCategory === "all" ? "true" : "false");
     allChip.textContent = t("catalog.filter.all");
     frag.appendChild(allChip);
 
@@ -41,8 +44,9 @@
       chip.className = "filter-chip";
       chip.type = "button";
       chip.setAttribute("data-filter", cat.id);
-      chip.setAttribute("aria-pressed", "false");
-      chip.textContent = cat[lang()].name;
+      chip.setAttribute("aria-pressed", state.activeCategory === cat.id ? "true" : "false");
+      var catContent = cat[lang()] || cat.es;
+      chip.textContent = catContent.name;
       frag.appendChild(chip);
     });
 
@@ -76,13 +80,15 @@
     countEl.textContent = total + " " + t("catalog.count.suffix");
   }
 
+  /* Tarjeta individual de producto */
   function productCard(product) {
     var card = document.createElement("article");
     card.className = "card product-card";
     card.setAttribute("data-reveal", "");
     card.setAttribute("data-product-id", product.id);
 
-    var content = product[lang()];
+    // Selecciona el idioma actual del objeto del producto
+    var content = product[lang()] || product.es;
 
     var mediaHTML = product.image 
       ? '<img src="' + escapeHtml(product.image) + '" alt="' + escapeHtml(content.name) + '" class="product-card__img" loading="lazy">'
@@ -114,9 +120,12 @@
     var cat = state.data.categories.find(function (c) { return c.id === catId; });
     return cat ? cat.icon : "flask-plus";
   }
+
   function categoryNameOf(catId) {
     var cat = state.data.categories.find(function (c) { return c.id === catId; });
-    return cat ? cat[lang()].name : "";
+    if (!cat) return "";
+    var content = cat[lang()] || cat.es;
+    return content.name;
   }
 
   function escapeHtml(str) {
@@ -125,13 +134,17 @@
     return div.innerHTML;
   }
 
+  /* Secciones agrupadas del catálogo */
   function renderSections() {
+    if (!elSections || !state.data) return;
     elSections.innerHTML = "";
     var frag = document.createDocumentFragment();
 
     state.data.categories.forEach(function (cat) {
       var products = state.data.products.filter(function (p) { return p.category === cat.id; });
       if (!products.length) return;
+
+      var catContent = cat[lang()] || cat.es;
 
       var section = document.createElement("section");
       section.className = "catalog-section";
@@ -145,7 +158,7 @@
       head.className = "catalog-section__head";
       head.innerHTML =
         '<div class="catalog-section__icon"><svg aria-hidden="true"><use href="' + iconSymbolFor(cat.icon) + '"></use></svg></div>' +
-        "<div><h2>" + escapeHtml(cat[lang()].name) + "</h2><p>" + escapeHtml(cat[lang()].tagline) + "</p></div>";
+        "<div><h2>" + escapeHtml(catContent.name) + "</h2><p>" + escapeHtml(catContent.tagline) + "</p></div>";
 
       var grid = document.createElement("div");
       grid.className = "product-grid";
@@ -162,6 +175,7 @@
   }
 
   function applyFilter() {
+    if (!elSections) return;
     var sections = elSections.querySelectorAll("[data-category-section]");
     var visibleCount = 0;
     sections.forEach(function (section) {
@@ -169,7 +183,9 @@
       section.style.display = match ? "" : "none";
       if (match) visibleCount++;
     });
-    elNoResults.classList.toggle("is-visible", visibleCount === 0);
+    if (elNoResults) {
+      elNoResults.classList.toggle("is-visible", visibleCount === 0);
+    }
     updateCount();
   }
 
@@ -193,10 +209,10 @@
     }
   }
 
-  /* Quote modal ------------------------------------------------------------ */
+  /* Modal de cotización */
   function openQuoteModal(product) {
     if (!elModal) return;
-    var content = product[lang()];
+    var content = product[lang()] || product.es;
     var currentLang = lang(); 
 
     elModal.querySelector("[data-modal-brand]").textContent = product.brand;
@@ -205,21 +221,16 @@
 
     var whatsappBtn = elModal.querySelector("#modal-whatsapp-btn");
     if (whatsappBtn) {
-      var messageText = "";
-      if (currentLang === "en") {
-        messageText = "Hello Lab Tecnology, I am interested in requesting a quote for: *" + content.name + "*.";
-      } else {
-        messageText = "Hola Lab Tecnology, me interesa solicitar una cotización para el equipo: *" + content.name + "*.";
-      }
+      var messageText = currentLang === "en" 
+        ? "Hello Lab Tecnology, I am interested in requesting a quote for: *" + content.name + "*."
+        : "Hola Lab Tecnology, me interesa solicitar una cotización para el equipo: *" + content.name + "*.";
       
-      var encodedMessage = encodeURIComponent(messageText);
-      whatsappBtn.href = "https://wa.me/584122542185?text=" + encodedMessage;
+      whatsappBtn.href = "https://wa.me/584122542185?text=" + encodeURIComponent(messageText);
     }
 
     var modalFeaturesEl = elModal.querySelector("[data-modal-features]");
     if (modalFeaturesEl) {
       modalFeaturesEl.innerHTML = "";
-      
       var features = content.features; 
       if (features && features.length > 0) {
         features.forEach(function (feature) {
@@ -239,13 +250,14 @@
       var body = (currentLang === "en" ? "I would like a quote for: " : "Deseo cotizar el equipo: ") + content.name;
       mailtoBtn.setAttribute(
         "href",
-        "mailto:labtecnology@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body)
+        "mailto:labtecnologyca@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body)
       );
     }
 
     elModal.classList.add("is-open");
     document.body.style.overflow = "hidden";
-    elModal.querySelector(".modal__close").focus();
+    var closeBtn = elModal.querySelector(".modal__close");
+    if (closeBtn) closeBtn.focus();
   }
 
   function closeQuoteModal() {
@@ -263,12 +275,17 @@
     });
   }
 
-  /* Init --------------------------------------------------------------------- */
-  function init(data) {
-    state.data = data;
-    buildFilterBar(data.categories);
+  /* Función para re-renderizar todo el catálogo según el idioma seleccionado */
+  function updateCatalogLanguage() {
+    if (!state.data) return;
+    buildFilterBar(state.data.categories);
     renderSections();
     applyFilter();
+  }
+
+  function init(data) {
+    state.data = data;
+    updateCatalogLanguage();
     scrollToRequestedAnchor();
   }
 
@@ -282,6 +299,7 @@
     }
   }
 
+  /* Carga del archivo JSON */
   fetch("data/products.json")
     .then(function (res) {
       if (!res.ok) throw new Error("Failed to load products.json");
@@ -292,16 +310,12 @@
       if (elSections) {
         elSections.innerHTML =
           '<div class="container"><p style="padding:3rem 0;color:var(--c-ink-soft)">No se pudo cargar el catálogo. ' +
-          "Verifica que el sitio se esté sirviendo mediante un servidor web (no como archivo local). / " +
+          "Verifica que el sitio se esté sirviendo mediante un servidor web. / " +
           "Could not load the catalog. Please make sure the site is served over HTTP.</p></div>";
       }
       console.error(err);
     });
 
-  document.addEventListener("lt:langchange", function () {
-    if (!state.data) return;
-    buildFilterBar(state.data.categories);
-    renderSections();
-    applyFilter();
-  });
+  // Escuchar el cambio de idioma desde i18n.js
+  document.addEventListener("lt:langchange", updateCatalogLanguage);
 })();

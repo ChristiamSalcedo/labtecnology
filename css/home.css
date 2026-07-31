@@ -241,19 +241,13 @@
 }
 
 /* About / Nosotros ------------------------------------------------------ */
-.about h2 {
-  font-size: clamp(1.65rem, 2.8vw, 2.15rem); /* O la variable var(--fs-3xl) que usas en los otros h2 */
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--c-blue-900);
-}
-
 .about {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: var(--sp-8);
-  align-items: stretch;
+  align-items: stretch; /* OBLIGATORIO: Fuerza a la columna izquierda a medir lo mismo que el texto */
 }
+
 @media (max-width: 900px) { 
   .about { 
     grid-template-columns: 1fr; 
@@ -261,35 +255,60 @@
   } 
 }
 
+/* Encabezado */
+.about h2 {
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--c-blue-900);
+}
+
 .about__visual {
   position: relative;
   background: var(--c-white);
   border-radius: var(--radius-lg);
-  padding: 0 !important; 
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(10,47,77,0.06);
-  overflow: hidden; 
-  display: flex;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; /* Ocupa el 100% del alto del grid que marca el texto */
+  min-height: 100%;
 }
 
+.about__visual img,
 .about__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover; /* Rellena todo el alto del contenedor */
+  object-position: 25% center; /* Enfoca a los dos científicos de la izquierda sin recortarlos */
   display: block;
 }
 
-.about__visual .about__image {
-  animation: float-y 6s ease-in-out infinite;
-}
-@keyframes float-y {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); } 
-}
+
 @media (prefers-reduced-motion: reduce) { 
-  .about__visual .about__image { animation: none; } 
+  .about__visual .about__image { 
+    animation: none; 
+  } 
 }
 
+@media (max-width: 900px) {
+  .about__visual {
+    height: 320px; /* Altura fija para celulares */
+    min-height: auto;
+  }
+}
+
+/* Cuerpo de texto */
+.about__body p { 
+  color: var(--c-ink-soft); 
+  font-size: var(--fs-md); 
+  text-align: justify; 
+}
+
+.about__body p + p { 
+  margin-top: var(--sp-4); 
+}
+
+/* Etiquetas e insignias */
 .about__origin {
   margin-top: var(--sp-6);
   display: flex;
@@ -297,6 +316,7 @@
   gap: var(--sp-2);
   justify-content: center;
 }
+
 .tag {
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
@@ -305,15 +325,7 @@
   border-radius: var(--radius-pill);
   background: var(--c-green-100);
   color: var(--c-green-700);
-  border: 1px solid rgba(76,127,31,0.18);
-}
-
-.about__body p + p { margin-top: var(--sp-4); }
-
-.about__body p { 
-  color: var(--c-ink-soft); 
-  font-size: var(--fs-md); 
-  text-align: justify; 
+  border: 1px solid rgba(76, 127, 31, 0.18);
 }
 
 .about__brandlist {
@@ -322,12 +334,13 @@
   flex-wrap: wrap;
   gap: var(--sp-2);
 }
+
 .about__brandlist span {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   padding: 6px 13px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(10,47,77,0.14);
+  border: 1px solid rgba(10, 47, 77, 0.14);
   color: var(--c-blue-800);
 }
 

@@ -29,7 +29,7 @@
 
       /* Hero */
       "hero.eyebrow": "Distribuidor autorizado de insumos médicos",
-      "hero.title.html": "Venta de equipos de laboratorio clínico , insumos <span class=\"accent\">y reactivos médicos en Venezuela</span>",
+      "hero.title.html": "Venta de equipos de laboratorio clínico, insumos <span class=\"accent\">y reactivos médicos en Venezuela</span>",
       "hero.lede": "Comercializamos equipos médicos y de laboratorio, material descartable y mobiliario clínico. Realizamos servicio técnico especializado, instalación y mantenimiento preventivo.",
       "hero.cta.catalog": "Ver catálogo completo",
       "hero.cta.contact": "Hablar con un asesor",
@@ -70,7 +70,7 @@
 
       /* Marcas */
       "brands.eyebrow": "Respaldo internacional",
-      "brands.title": "Comercialización y soporte tecnico de Biobase y Edan en Venezuela.",
+      "brands.title": "Comercialización y soporte técnico de Biobase y Edan en Venezuela.",
       "brands.subtitle": "Trabajamos con fabricantes líderes a nivel mundial que avalan la calidad de cada equipo con ensayos clínicos y certificaciones internacionales.",
       "brands.note": "Ofrecemos a nuestros clientes insumos y equipos de alta calidad, eficiencia en la cadena de suministro, una plataforma logística robusta y flexible, y una excelente relación fabricante–distribuidor a precios competitivos.",
 
@@ -120,7 +120,7 @@
       "faq.q1": "¿Dónde distribuyen los equipos de laboratorio clínico?",
       "faq.a1": "Lab Tecnology C.A. suministra equipos de laboratorio clínico en Caracas y en toda Venezuela, con entrega, instalación y servicio técnico incluido.",
       "faq.q2": "¿Qué marcas de insumos médicos distribuyen en Venezuela?",
-      "faq.a2": "Somos distribuidor de marcas como Mindray, Beckman Coulter, Werfen, Abbott y Biobase, todas respaldadas por ensayos clínicos y certificaciones internacionales de calidad, disponibles a través de Lab Tecnology C.A. en Venezuela.",
+      "faq.a2": "Comercialización de productos de las siguientes marcas: Mindray, Beckman Coulter, Werfen, Abbott y Biobase, todas respaldadas por ensayos clínicos y certificaciones internacionales de calidad, disponibles a través de Lab Tecnology C.A. en Venezuela.",
       "faq.q3": "¿Ofrecen servicio técnico de equipos de laboratorio en Venezuela?",
       "faq.a3": "Ofrecemos servicio técnico de equipos de laboratorio en Venezuela, incluyendo instalación, mantenimiento preventivo y correctivo para todas las marcas que comercializamos.",
       "faq.q4": "¿Venden equipos médicos hospitalarios en Venezuela?",
@@ -262,7 +262,7 @@
       "faq.q1": "Where do you distribute clinical laboratory equipment?",
       "faq.a1": "Lab Tecnology C.A. supplies clinical laboratory equipment in Caracas and throughout Venezuela, including delivery, installation, and technical service.",
       "faq.q2": "What brands of medical supplies do you distribute in Venezuela?",
-      "faq.a2": "We are distributors of brands such as Mindray, Beckman Coulter, Werfen, Abbott, and Biobase, all backed by clinical trials and international quality certifications, available through Lab Tecnology C.A. in Venezuela.",
+      "faq.a2": "Marketing of products from the following brands Mindray, Beckman Coulter, Werfen, Abbott, and Biobase, all backed by clinical trials and international quality certifications, available through Lab Tecnology C.A. in Venezuela.",
       "faq.q3": "Do you offer technical service for laboratory equipment in Venezuela?",
       "faq.a3": "We offer technical service for laboratory equipment in Venezuela, including installation, preventive maintenance, and corrective repairs for all brands we commercialize.",
       "faq.q4": "Do you sell hospital medical equipment in Venezuela?",
@@ -300,12 +300,15 @@
   function getLang() {
     var stored = null;
     try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) { /* ignore */ }
-    return stored === "en" || stored === "es" ? stored : DEFAULT_LANG;
+    if (stored === "en" || stored === "es") return stored;
+    
+    var htmlLang = document.documentElement.getAttribute("lang");
+    return htmlLang === "en" || htmlLang === "es" ? htmlLang : DEFAULT_LANG;
   }
 
   function setLang(lang) {
     if (lang !== "en" && lang !== "es") return;
-    try { localStorage.setItem(STORAGE_KEY); } catch (e) { /* ignore */ }
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
     applyLang(lang);
     document.dispatchEvent(new CustomEvent("lt:langchange", { detail: { lang: lang } }));
   }
