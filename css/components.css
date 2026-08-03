@@ -198,16 +198,15 @@
 }
 .nav__link, 
 .nav a {
-  white-space: nowrap; /* Impide que "Misión y Visión" o "Preguntas frecuentes" se dividan */
-  font-size: 0.92rem; /* Reduce ligeramente el tamaño (de 1rem a ~0.92rem / 15px) */
-  padding: 0.5rem 0.6rem; /* Ajusta el espacio interno de los enlaces */
+  white-space: nowrap; 
+  font-size: 0.92rem; 
+  padding: 0.5rem 0.6rem; 
 }
 
-/* Espaciado entre elementos de la lista del menú */
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Si tenías gap: 1.5rem o 2rem, redúcelo a 1rem o 1.2rem */
+  gap: 1rem; 
 }
 .nav__list a {
   position: relative;
@@ -234,7 +233,6 @@
   margin-left: auto; 
 }
 
-/* Selector de idioma */
 .lang-switch {
   display: inline-flex;
   border: 1.5px solid rgba(10,47,77,0.16);
@@ -287,13 +285,11 @@
 .nav-toggle svg { width: 20px; height: 20px; display: block; }
 
 @media (max-width: 900px) {
-  /* 1. Elevar el contenedor principal del header sobre la capa del menú */
   .site-header .container {
     position: relative;
     z-index: 1002 !important;
   }
 
-  /* 2. Proteger el Logo para que SIEMPRE sea visible */
   .brand,
   .brand img {
     position: relative;
@@ -303,13 +299,12 @@
     visibility: visible !important;
   }
 
-  /* 3. Botón Hamburguesa */
   .nav-toggle { 
     display: inline-flex !important; 
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1003 !important; /* Por encima del panel desplegable */
+    z-index: 1003 !important;
     background: transparent;
     border: 1.5px solid rgba(10,47,77,0.16);
     border-radius: var(--radius-sm);
@@ -326,7 +321,6 @@
     stroke: currentColor; 
   }
 
-  /* 4. Pantalla/Fondo del Menú desplegado */
   .nav {
     position: fixed !important;
     inset: 0 !important;
@@ -354,7 +348,6 @@
     font-size: var(--fs-lg) !important; 
   }
 
-  /* 5. Enlaces en Blanco dentro del menú desplegado */
   .nav__list a,
   .nav__link { 
     color: #ffffff !important; 
@@ -364,8 +357,6 @@
     background: var(--c-green-400); 
   }
 
-  /* 6. CAMBIO DE COLOR DEL BOTÓN CUANDO EL MENÚ ESTÁ ABIERTO */
-  /* Cambia el borde e icono del botón hamburguesa a blanco cuando la clase .is-open está activa */
   .site-header:has(.nav.is-open) .nav-toggle,
   .nav.is-open ~ .nav-toggle,
   .nav-toggle[aria-expanded="true"] {
@@ -520,10 +511,8 @@
   gap: var(--sp-3);
   font-size: var(--fs-2xs);
   color: rgba(255,255,255,0.5);
-  /* Hereda --font-mono mediante la clase en base.css */
 }
 
-/* Créditos del Desarrollador en el Footer */
 .footer-credit {
   display: inline-flex;
   align-items: center;
@@ -593,7 +582,7 @@
 }
 
 .form-toast--success {
-  background-color: #7ec13a; /* Verde Lab Tecnology */
+  background-color: #7ec13a; 
   border-left: 4px solid #5a9126;
 }
 

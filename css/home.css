@@ -29,6 +29,7 @@
   animation: orbit-spin 46s linear infinite;
   transform-origin: 50% 50%;
 }
+
 .hero__orbit--slow {
   right: -14%;
   top: 20%;
@@ -37,10 +38,12 @@
   animation-duration: 70s;
   animation-direction: reverse;
 }
+
 @keyframes orbit-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .hero__orbit { animation: none; }
 }
@@ -53,6 +56,7 @@
   gap: var(--sp-8);
   align-items: center;
 }
+
 @media (max-width: 980px) {
   .hero__grid { grid-template-columns: 1fr; }
 }
@@ -66,6 +70,7 @@
   line-height: 1.2; 
   color: var(--c-blue-900);
 }
+
 .hero h1 .accent {
   background: none !important;
   -webkit-background-clip: unset !important;
@@ -88,17 +93,16 @@
   gap: var(--sp-4);
 }
 
+/* Estadísticas Hero */
 .hero__stats {
   margin-top: var(--sp-8);
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: var(--sp-7);
 }
-@media (max-width: 480px) {
-  .hero__stats { grid-template-columns: repeat(2, auto); }
-}
+
 .hero__stat .num {
-  font-family: var(--font-mono); /* Números alineados a la fuente monoespaciada */
+  font-family: var(--font-mono); 
   font-size: var(--fs-xl);
   color: var(--c-blue-900);
   font-weight: 700;
@@ -106,12 +110,31 @@
   align-items: baseline;
   gap: 2px;
 }
+
 .hero__stat .label {
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--c-ink-soft);
+}
+
+/* Forzar 3 columnas alineadas en una sola fila para celulares */
+@media (max-width: 600px) {
+  .hero__stats {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--sp-3, 0.75rem) !important;
+  }
+
+  .hero__stat .num {
+    font-size: clamp(1.2rem, 4.5vw, 1.5rem) !important;
+    white-space: nowrap;
+  }
+
+  .hero__stat .label {
+    font-size: 0.58rem !important;
+    line-height: 1.2;
+  }
 }
 
 /* Hero visual: Instrument readout panel -------------------------------- */
@@ -125,6 +148,7 @@
   isolation: isolate;
   overflow: hidden;
 }
+
 .hero__panel::before {
   content: "";
   position: absolute;
@@ -132,6 +156,7 @@
   background: linear-gradient(160deg, rgba(126,193,58,0.22), transparent 60%);
   pointer-events: none;
 }
+
 .hero__panel-head {
   display: flex;
   align-items: center;
@@ -143,16 +168,19 @@
   color: rgba(255,255,255,0.6);
   margin-bottom: var(--sp-5);
 }
+
 .hero__panel-dot {
   display: inline-flex; align-items: center; gap: 6px;
   color: var(--c-green-400);
 }
+
 .hero__panel-dot i {
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--c-green-400);
   box-shadow: 0 0 0 4px rgba(126,193,58,0.22);
   animation: pulse-dot 1.8s ease-in-out infinite;
 }
+
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.35; }
@@ -167,6 +195,7 @@
   overflow: hidden;
   margin-bottom: var(--sp-5);
 }
+
 .hero__scan svg { width: 100%; height: 100%; }
 
 .hero__scan-line {
@@ -177,6 +206,7 @@
   box-shadow: 0 0 14px var(--c-green-400);
   animation: scan-move 3.4s ease-in-out infinite;
 }
+
 @keyframes scan-move {
   0%, 100% { left: 4%; }
   50% { left: 94%; }
@@ -187,12 +217,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-3);
 }
+
 .hero__readout div {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-sm);
   padding: var(--sp-3);
 }
+
 .hero__readout .rlabel {
   font-family: var(--font-mono);
   font-size: 0.62rem;
@@ -200,6 +232,7 @@
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
 }
+
 .hero__readout .rval {
   font-family: var(--font-mono);
   font-size: var(--fs-md);
@@ -212,6 +245,7 @@
   position: relative;
   z-index: 1;
 }
+
 .hero__marquee-label {
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
@@ -221,6 +255,7 @@
   margin-bottom: var(--sp-4);
   text-align: center;
 }
+
 .hero__brandstrip {
   width: 100%;
   max-width: 720px;
@@ -230,12 +265,14 @@
   opacity: 0.96;
   transition: transform var(--dur-med) var(--ease-out);
 }
+
 .hero__brandstrip:hover { transform: scale(1.015); }
 
 .hero__visual-space {
   min-height: 1px;
   width: 100%;
 }
+
 @media (max-width: 980px) {
   .hero__visual-space { display: none; }
 }
@@ -245,7 +282,7 @@
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: var(--sp-8);
-  align-items: stretch; /* OBLIGATORIO: Fuerza a la columna izquierda a medir lo mismo que el texto */
+  align-items: stretch; 
 }
 
 @media (max-width: 900px) { 
@@ -270,7 +307,7 @@
   padding: 0;
   overflow: hidden;
   width: 100%;
-  height: 100%; /* Ocupa el 100% del alto del grid que marca el texto */
+  height: 100%; 
   min-height: 100%;
 }
 
@@ -278,8 +315,8 @@
 .about__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Rellena todo el alto del contenedor */
-  object-position: 25% center; /* Enfoca a los dos científicos de la izquierda sin recortarlos */
+  object-fit: cover; 
+  object-position: 25% center;
   display: block;
 }
 
@@ -292,12 +329,11 @@
 
 @media (max-width: 900px) {
   .about__visual {
-    height: 320px; /* Altura fija para celulares */
+    height: 320px; 
     min-height: auto;
   }
 }
 
-/* Cuerpo de texto */
 .about__body p { 
   color: var(--c-ink-soft); 
   font-size: var(--fs-md); 
@@ -308,7 +344,6 @@
   margin-top: var(--sp-4); 
 }
 
-/* Etiquetas e insignias */
 .about__origin {
   margin-top: var(--sp-6);
   display: flex;
@@ -345,25 +380,23 @@
 }
 
 /* Mission / Vision / Values -------------------------------------------- */
-/* 1. Estilos por defecto (Pensado para pantallas táctiles / Móviles) */
 #mision .section-head {
   width: 100%;
   max-width: 100% !important;
   display: flex;
   flex-direction: column;
-  align-items: center;        /* Centra flex items */
+  align-items: center;        
   text-align: center;
 }
 
 #mision .section-head h2 {
   max-width: 100% !important;
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem); /* Bajamos un pelo la escala para asegurar que entre sin empujar */
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem); 
   white-space: nowrap;
-  margin-inline: auto !important;           /* Centra los márgenes laterales (auto a ambos lados) */
+  margin-inline: auto !important;         
   text-align: center;
 }
 
-/* En celulares volvemos a permitir el salto de línea para evitar overflow */
 @media (max-width: 768px) {
   #mision .section-head h2 {
     white-space: normal;
@@ -372,10 +405,10 @@
 
 .expanding-pillars {
   display: flex;
-  flex-direction: column; /* En móvil se apilan en vertical */
+  flex-direction: column; 
   gap: var(--sp-4);
   width: 100%;
-  height: auto; /* Altura flexible */
+  height: auto; 
   margin-top: var(--sp-6);
 }
 
@@ -412,7 +445,6 @@
   text-transform: uppercase;
 }
 
-/* En móvil, el texto SIEMPRE está visible */
 .expanding-pillar__text-wrapper {
   display: block;
   opacity: 1;
@@ -430,11 +462,10 @@
   text-align: center;
 }
 
-/* 2. Estilos para Escritorio / Computadoras (Dispositivos CON mouse) */
 @media (min-width: 861px) and (hover: hover) {
   .expanding-pillars {
-    flex-direction: row; /* En PC vuelven a ser columnas lado a lado */
-    height: 450px;       /* Altura fija para el efecto de acordeón */
+    flex-direction: row; 
+    height: 450px;     
   }
 
   .expanding-pillar {
@@ -450,7 +481,6 @@
     box-shadow: var(--shadow-lg);
   }
 
-  /* En PC ocultamos el texto por defecto para activar el HOVER */
   .expanding-pillar__text-wrapper {
     display: grid;
     grid-template-rows: 0fr;
@@ -465,7 +495,6 @@
     padding-top: var(--sp-4);
   }
 
-  /* Revelar texto al pasar el mouse en PC */
   .expanding-pillar:hover .expanding-pillar__text-wrapper {
     grid-template-rows: 1fr;
     opacity: 1;
@@ -475,14 +504,14 @@
 
 /* Brands Section — Marquee ---------------------------------------------- */
 #marcas .section-head {
-  max-width: 900px !important;              /* Amplía el espacio total del encabezado */
+  max-width: 900px !important;             
   margin-inline: auto !important;
   text-align: center;
 }
 
 #marcas .section-head h2 {
-  max-width: 100% !important;               /* Usa todo el espacio que le da el padre */
-  font-size: clamp(1.6rem, 2.7vw, 2.1rem);  /* Tamaño óptimo para no forzar quiebres */
+  max-width: 100% !important;              
+  font-size: clamp(1.6rem, 2.7vw, 2.1rem);  
   margin-inline: auto !important;
   text-align: center;
 }
@@ -868,7 +897,7 @@
 
 .faq-item[open] .faq-item__icon {
   transform: rotate(90deg);
-  stroke: var(--c-green-500, #7ec13a); /* Cambia a verde cuando está abierto */
+  stroke: var(--c-green-500, #7ec13a); 
 }
 
 .faq-item__answer {
