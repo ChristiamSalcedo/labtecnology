@@ -196,20 +196,18 @@
   flex-grow: 1;
   position: static; 
 }
+.nav__link, 
+.nav a {
+  white-space: nowrap; /* Impide que "Misión y Visión" o "Preguntas frecuentes" se dividan */
+  font-size: 0.92rem; /* Reduce ligeramente el tamaño (de 1rem a ~0.92rem / 15px) */
+  padding: 0.5rem 0.6rem; /* Ajusta el espacio interno de los enlaces */
+}
+
+/* Espaciado entre elementos de la lista del menú */
 .nav__list {
   display: flex;
   align-items: center;
-  gap: var(--sp-6);
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); 
-  z-index: 10;
+  gap: 1rem; /* Si tenías gap: 1.5rem o 2rem, redúcelo a 1rem o 1.2rem */
 }
 .nav__list a {
   position: relative;
@@ -289,7 +287,46 @@
 .nav-toggle svg { width: 20px; height: 20px; display: block; }
 
 @media (max-width: 900px) {
-  .nav-toggle { display: inline-flex; }
+  /* 1. Elevar el contenedor principal del header sobre la capa del menú */
+  .site-header .container {
+    position: relative;
+    z-index: 1002 !important;
+  }
+
+  /* 2. Proteger el Logo para que SIEMPRE sea visible */
+  .brand,
+  .brand img {
+    position: relative;
+    z-index: 1003 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* 3. Botón Hamburguesa */
+  .nav-toggle { 
+    display: inline-flex !important; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1003 !important; /* Por encima del panel desplegable */
+    background: transparent;
+    border: 1.5px solid rgba(10,47,77,0.16);
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+    color: var(--c-blue-900);
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .nav-toggle svg { 
+    width: 20px; 
+    height: 20px; 
+    display: block; 
+    fill: currentColor; 
+    stroke: currentColor; 
+  }
+
+  /* 4. Pantalla/Fondo del Menú desplegado */
   .nav {
     position: fixed !important;
     inset: 0 !important;
@@ -301,6 +338,11 @@
     padding: var(--sp-8) var(--sp-6) !important;
     transform: translateX(100%);
     transition: transform var(--dur-med) var(--ease-out);
+    z-index: 1000 !important;
+  }
+
+  .nav.is-open { 
+    transform: translateX(0) !important; 
   }
   
   .nav__list { 
@@ -311,13 +353,52 @@
     gap: var(--sp-5) !important; 
     font-size: var(--fs-lg) !important; 
   }
-  
-  .nav.is-open { transform: translateX(0); }
-  .nav__list a { color: var(--c-white); }
-  .nav__list a::after { background: var(--c-green-400); }
-  .nav__actions { flex-direction: column !important; align-items: flex-start !important; gap: var(--sp-5) !important; width: 100% !important; margin-left: 0 !important; }
-  .lang-switch { border-color: rgba(255,255,255,0.28); }
-  .lang-switch button { color: rgba(255,255,255,0.75); }
+
+  /* 5. Enlaces en Blanco dentro del menú desplegado */
+  .nav__list a,
+  .nav__link { 
+    color: #ffffff !important; 
+  }
+
+  .nav__list a::after { 
+    background: var(--c-green-400); 
+  }
+
+  /* 6. CAMBIO DE COLOR DEL BOTÓN CUANDO EL MENÚ ESTÁ ABIERTO */
+  /* Cambia el borde e icono del botón hamburguesa a blanco cuando la clase .is-open está activa */
+  .site-header:has(.nav.is-open) .nav-toggle,
+  .nav.is-open ~ .nav-toggle,
+  .nav-toggle[aria-expanded="true"] {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .site-header:has(.nav.is-open) .nav-toggle svg,
+  .site-header:has(.nav.is-open) .nav-toggle svg use,
+  .nav.is-open ~ .nav-toggle svg,
+  .nav.is-open ~ .nav-toggle svg use,
+  .nav-toggle[aria-expanded="true"] svg,
+  .nav-toggle[aria-expanded="true"] svg use {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    color: #ffffff !important;
+  }
+
+  .nav__actions { 
+    flex-direction: column !important; 
+    align-items: flex-start !important; 
+    gap: var(--sp-5) !important; 
+    width: 100% !important; 
+    margin-left: 0 !important; 
+  }
+
+  .lang-switch { 
+    border-color: rgba(255,255,255,0.28); 
+  }
+
+  .lang-switch button { 
+    color: rgba(255,255,255,0.75); 
+  }
 }
 
 .social-row { 

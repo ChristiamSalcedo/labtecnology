@@ -29,7 +29,7 @@
 
       /* Hero */
       "hero.eyebrow": "Distribuidor autorizado de insumos médicos",
-      "hero.title.html": "Venta de equipos de laboratorio clínico, insumos <span class=\"accent\">y reactivos médicos en Venezuela</span>",
+      "hero.title.html": "Venta de insumos médicos y equipos de laboratorio en Venezuela</span>",
       "hero.lede": "Comercializamos equipos médicos y de laboratorio, material descartable y mobiliario clínico. Realizamos servicio técnico especializado, instalación y mantenimiento preventivo.",
       "hero.cta.catalog": "Ver catálogo completo",
       "hero.cta.contact": "Hablar con un asesor",
@@ -171,7 +171,7 @@
 
       /* Hero English */
       "hero.eyebrow": "Authorized distributor of medical supplies",
-      "hero.title.html": "Sale of clinical laboratory equipment, supplies <span class=\"accent\">and medical reagents in Venezuela</span>",
+      "hero.title.html": "Sale of medical supplies and laboratory equipment in Venezuela</span>",
       "hero.lede": "We commercialize medical and laboratory equipment, disposable materials and clinical furniture. We provide specialized technical service, installation and preventive maintenance.",
       "hero.cta.catalog": "View full catalog",
       "hero.cta.contact": "Talk to an advisor",
