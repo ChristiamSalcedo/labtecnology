@@ -523,6 +523,25 @@
   /* Hereda --font-mono mediante la clase en base.css */
 }
 
+/* Créditos del Desarrollador en el Footer */
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.credit-link {
+  color: var(--c-green-400, #7ec13a) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out), text-decoration var(--dur-fast) var(--ease-out);
+}
+
+.credit-link:hover {
+  color: var(--c-white, #ffffff) !important;
+  text-decoration: underline;
+}
+
 /* Back to top ---------------------------------------------------------- */
 .back-to-top {
   position: fixed;
