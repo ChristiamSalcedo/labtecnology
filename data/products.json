@@ -302,7 +302,7 @@
       "id": "gem-premier-5000",
       "category": "gasesarteriales",
       "brand": "IL",
-      "image": "assets/img/products/premier-5000.png",
+      "image": "./assets/img/products/premier-5000.png",
       "es": {
         "name": "Analizador de Gases Arteriales GEM Premier 5000",
         "description": "Analizador automático de gases arteriales de última generación, diseñado para realizar pruebas críticas en sangre total con alta precisión y rapidez. Ideal para laboratorios clínicos, unidades de cuidados intensivos, emergencias y quirófanos.",
